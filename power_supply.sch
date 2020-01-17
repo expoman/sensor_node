@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 2
+Sheet 2 3
 Title ""
 Date ""
 Rev ""
@@ -62,10 +62,6 @@ Wire Wire Line
 	4800 2250 4350 2250
 Text Label 4600 2150 0    50   ~ 0
 VBAT
-Wire Wire Line
-	2250 1550 1850 1550
-Text Label 2050 1550 0    50   ~ 0
-VUSB
 Wire Wire Line
 	3750 1650 3750 1150
 Text Label 2350 1150 0    50   ~ 0
@@ -335,16 +331,16 @@ F 3 "" H 2850 3600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1550 2150 1550 2500
+	850  2000 850  2150
 $Comp
 L power:GND #PWR?
 U 1 1 5E2440FA
-P 1550 2500
-F 0 "#PWR?" H 1550 2250 50  0001 C CNN
-F 1 "GND" H 1555 2327 50  0000 C CNN
-F 2 "" H 1550 2500 50  0001 C CNN
-F 3 "" H 1550 2500 50  0001 C CNN
-	1    1550 2500
+P 850 2350
+F 0 "#PWR?" H 850 2100 50  0001 C CNN
+F 1 "GND" H 855 2177 50  0000 C CNN
+F 2 "" H 850 2350 50  0001 C CNN
+F 3 "" H 850 2350 50  0001 C CNN
+	1    850  2350
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -384,22 +380,85 @@ $EndComp
 $Comp
 L Connector:USB_B_Micro J?
 U 1 1 5E244112
-P 1550 1750
-F 0 "J?" H 1607 2217 50  0000 C CNN
-F 1 "USB_B_Micro" H 1607 2126 50  0000 C CNN
-F 2 "" H 1700 1700 50  0001 C CNN
-F 3 "~" H 1700 1700 50  0001 C CNN
-	1    1550 1750
+P 850 1600
+F 0 "J?" H 907 2067 50  0000 C CNN
+F 1 "USB_B_Micro" H 907 1976 50  0000 C CNN
+F 2 "" H 1000 1550 50  0001 C CNN
+F 3 "~" H 1000 1550 50  0001 C CNN
+	1    850  1600
 	1    0    0    -1  
 $EndComp
 Text GLabel 4750 1850 2    50   Input ~ 0
 VCC
 Wire Wire Line
-	1850 1750 2100 1750
+	1150 1600 1400 1600
 Wire Wire Line
-	1850 1850 2100 1850
-Text GLabel 2100 1750 2    50   Input ~ 0
+	1150 1700 1400 1700
+Text GLabel 1850 1600 2    50   Input ~ 0
 USB_D+
-Text GLabel 2100 1850 2    50   Input ~ 0
+Text GLabel 1850 1700 2    50   Input ~ 0
 USB_D-
+Wire Wire Line
+	750  2000 750  2150
+Wire Wire Line
+	750  2150 850  2150
+Connection ~ 850  2150
+Wire Wire Line
+	850  2150 850  2300
+$Comp
+L Device:R R?
+U 1 1 5E219E91
+P 1250 2050
+F 0 "R?" H 1320 2096 50  0000 L CNN
+F 1 "100k" H 1320 2005 50  0000 L CNN
+F 2 "" V 1180 2050 50  0001 C CNN
+F 3 "~" H 1250 2050 50  0001 C CNN
+	1    1250 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1150 1800 1250 1800
+Wire Wire Line
+	1250 1800 1250 1900
+Wire Wire Line
+	1250 2200 1250 2300
+Wire Wire Line
+	1250 2300 850  2300
+Connection ~ 850  2300
+Wire Wire Line
+	850  2300 850  2350
+$Comp
+L Device:R R?
+U 1 1 5E224F11
+P 1550 1600
+F 0 "R?" V 1343 1600 50  0000 C CNN
+F 1 "0" V 1434 1600 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 1480 1600 50  0001 C CNN
+F 3 "~" H 1550 1600 50  0001 C CNN
+	1    1550 1600
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5E22558B
+P 1550 1700
+F 0 "R?" V 1343 1700 50  0000 C CNN
+F 1 "0" V 1434 1700 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 1480 1700 50  0001 C CNN
+F 3 "~" H 1550 1700 50  0001 C CNN
+	1    1550 1700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1700 1600 1850 1600
+Wire Wire Line
+	1700 1700 1850 1700
+Wire Wire Line
+	1150 1400 1400 1400
+Wire Wire Line
+	1400 1400 1400 1000
+Wire Wire Line
+	1600 1000 1400 1000
+Text GLabel 1600 1000 2    50   Input ~ 0
+VUSB
 $EndSCHEMATC
