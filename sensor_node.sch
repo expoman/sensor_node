@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 3
+Sheet 1 4
 Title ""
 Date ""
 Rev ""
@@ -24,5 +24,11 @@ S 3600 1050 1100 1150
 U 5E2157B8
 F0 "mcu.sch" 50
 F1 "mcu.sch" 50
+$EndSheet
+$Sheet
+S 5450 1050 1050 1150
+U 5E269FC3
+F0 "wireless" 50
+F1 "wireless.sch" 50
 $EndSheet
 $EndSCHEMATC
