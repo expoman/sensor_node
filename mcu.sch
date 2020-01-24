@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 4
+Sheet 3 6
 Title ""
 Date ""
 Rev ""
@@ -591,4 +591,14 @@ F 3 "" H 4500 1850 50  0001 C CNN
 	1    4500 1850
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	6300 2400 7250 2400
+Wire Wire Line
+	6300 2500 7250 2500
+Text Notes 6400 2500 0    50   ~ 0
+PA2: USART2_TX\nPA3: USART2_RX
+Text GLabel 7250 2400 2    50   Input ~ 0
+ESP_RX
+Text GLabel 7250 2500 2    50   Input ~ 0
+ESP_TX
 $EndSCHEMATC

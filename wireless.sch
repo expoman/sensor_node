@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 4
+Sheet 4 6
 Title ""
 Date ""
 Rev ""
@@ -155,4 +155,15 @@ Wire Wire Line
 	1450 2800 1450 2950
 Text Label 1800 2800 0    50   ~ 0
 NRST
+$Comp
+L RF:SX1262 U?
+U 1 1 5E2AB46F
+P 7950 2400
+F 0 "U?" H 7945 3172 50  0000 C CNN
+F 1 "SX1262" H 7945 3081 50  0000 C CNN
+F 2 "Package_DFN_QFN:QFN-24_EP_4x4_Pitch0.5mm" H 7950 2300 50  0001 C CNN
+F 3 "" H 7950 2300 50  0001 C CNN
+	1    7950 2400
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
