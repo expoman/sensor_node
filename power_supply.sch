@@ -40,7 +40,7 @@ Wire Wire Line
 Wire Wire Line
 	9100 1300 8650 1300
 Text Label 8650 1300 0    50   ~ 0
-VBAT
+VBAT_P
 $Comp
 L power:GND #PWR0101
 U 1 1 5E24405B
@@ -561,4 +561,198 @@ Wire Wire Line
 	1400 750  2200 750 
 Text Label 3200 1400 1    50   ~ 0
 VUSB
+$Comp
+L Battery_Management:BQ27441-G1 U?
+U 1 1 5E2F5371
+P 3300 4300
+F 0 "U?" H 3300 4967 50  0000 C CNN
+F 1 "BQ27441-G1" H 3300 4876 50  0000 C CNN
+F 2 "Package_SON:Texas_S-PDSO-N12" H 3550 3750 50  0001 L CNN
+F 3 "http://www.ti.com/lit/ds/symlink/bq27441-g1.pdf" H 3500 4500 50  0001 C CNN
+	1    3300 4300
+	1    0    0    -1  
+$EndComp
+Text Label 1150 3900 0    50   ~ 0
+VBAT_P
+$Comp
+L Device:R R?
+U 1 1 5E2FCA07
+P 1800 4500
+F 0 "R?" H 1870 4546 50  0000 L CNN
+F 1 "R" H 1870 4455 50  0000 L CNN
+F 2 "" V 1730 4500 50  0001 C CNN
+F 3 "~" H 1800 4500 50  0001 C CNN
+	1    1800 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2300 4750 2300 4500
+Wire Wire Line
+	2300 4500 2700 4500
+Wire Wire Line
+	2700 4400 1950 4400
+Wire Wire Line
+	1950 4400 1950 4250
+Wire Wire Line
+	1150 3900 1500 3900
+Wire Wire Line
+	1500 4750 1500 3900
+Connection ~ 1500 3900
+Wire Wire Line
+	1500 3900 2400 3900
+Text Label 1650 4250 0    50   ~ 0
+VBAT
+$Comp
+L Device:C C?
+U 1 1 5E30DF00
+P 2400 3600
+F 0 "C?" H 2515 3646 50  0000 L CNN
+F 1 "1uF" H 2515 3555 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 2438 3450 50  0001 C CNN
+F 3 "~" H 2400 3600 50  0001 C CNN
+	1    2400 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2400 3750 2400 3900
+Connection ~ 2400 3900
+Wire Wire Line
+	2400 3900 2700 3900
+Wire Wire Line
+	2400 3450 2400 3150
+Text Label 2400 3300 1    50   ~ 0
+GND
+Wire Wire Line
+	2700 4200 2600 4200
+Wire Wire Line
+	2700 4100 2600 4100
+Text GLabel 2600 4100 0    50   Input ~ 0
+I2C1_SDA
+Wire Wire Line
+	1500 4750 1800 4750
+Wire Wire Line
+	1650 4250 1800 4250
+Wire Wire Line
+	1800 4350 1800 4250
+Connection ~ 1800 4250
+Wire Wire Line
+	1800 4250 1950 4250
+Wire Wire Line
+	1800 4650 1800 4750
+Connection ~ 1800 4750
+Wire Wire Line
+	1800 4750 2300 4750
+Text GLabel 2600 4200 0    50   Input ~ 0
+I2C1_SCL
+Wire Wire Line
+	3200 4900 3200 5100
+Wire Wire Line
+	3200 5100 3250 5100
+Wire Wire Line
+	3300 5100 3300 4900
+Wire Wire Line
+	3250 5100 3250 5200
+Connection ~ 3250 5100
+Wire Wire Line
+	3250 5100 3300 5100
+$Comp
+L power:GND #PWR?
+U 1 1 5E344874
+P 3250 5200
+F 0 "#PWR?" H 3250 4950 50  0001 C CNN
+F 1 "GND" H 3255 5027 50  0000 C CNN
+F 2 "" H 3250 5200 50  0001 C CNN
+F 3 "" H 3250 5200 50  0001 C CNN
+	1    3250 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5E348D38
+P 5100 4300
+F 0 "C?" H 5215 4346 50  0000 L CNN
+F 1 "0.47uF" H 5215 4255 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 5138 4150 50  0001 C CNN
+F 3 "~" H 5100 4300 50  0001 C CNN
+	1    5100 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 4150 5100 4000
+Wire Wire Line
+	5100 4450 5100 4650
+$Comp
+L power:GND #PWR?
+U 1 1 5E350ED3
+P 5100 4650
+F 0 "#PWR?" H 5100 4400 50  0001 C CNN
+F 1 "GND" H 5105 4477 50  0000 C CNN
+F 2 "" H 5100 4650 50  0001 C CNN
+F 3 "" H 5100 4650 50  0001 C CNN
+	1    5100 4650
+	1    0    0    -1  
+$EndComp
+Text Label 4800 4000 0    50   ~ 0
+VCC_1.8V
+Wire Wire Line
+	3900 4300 4100 4300
+$Comp
+L Device:R R?
+U 1 1 5E3555CB
+P 4100 4600
+F 0 "R?" H 4170 4646 50  0000 L CNN
+F 1 "10k" H 4170 4555 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 4030 4600 50  0001 C CNN
+F 3 "~" H 4100 4600 50  0001 C CNN
+	1    4100 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4100 4450 4100 4300
+Text Label 4100 5100 1    50   ~ 0
+VCC_1.8V
+Wire Wire Line
+	4100 4750 4100 5100
+Connection ~ 5100 4000
+Wire Wire Line
+	5100 4000 5150 4000
+Wire Wire Line
+	4100 4300 4150 4300
+Connection ~ 4100 4300
+Text GLabel 4150 4300 2    50   Input ~ 0
+VBAT_LOW_ALERT
+Wire Wire Line
+	3900 4000 5100 4000
+Wire Wire Line
+	2700 4700 2550 4700
+Wire Wire Line
+	2550 4700 2550 5150
+Wire Wire Line
+	2550 5150 2400 5150
+$Comp
+L Device:R R?
+U 1 1 5E38B6E0
+P 2400 5500
+F 0 "R?" H 2470 5546 50  0000 L CNN
+F 1 "10k" H 2470 5455 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 2330 5500 50  0001 C CNN
+F 3 "~" H 2400 5500 50  0001 C CNN
+	1    2400 5500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2400 5350 2400 5150
+Wire Wire Line
+	2400 5650 2400 5850
+$Comp
+L power:GND #PWR?
+U 1 1 5E39759F
+P 2400 5850
+F 0 "#PWR?" H 2400 5600 50  0001 C CNN
+F 1 "GND" H 2405 5677 50  0000 C CNN
+F 2 "" H 2400 5850 50  0001 C CNN
+F 3 "" H 2400 5850 50  0001 C CNN
+	1    2400 5850
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
