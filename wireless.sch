@@ -16,40 +16,40 @@ $EndDescr
 $Comp
 L RF_Module:ESP-12F U?
 U 1 1 5E27600D
-P 3250 2600
-F 0 "U?" H 3250 3581 50  0000 C CNN
-F 1 "ESP-12F" H 3250 3490 50  0000 C CNN
-F 2 "RF_Module:ESP-12E" H 3250 2600 50  0001 C CNN
-F 3 "http://wiki.ai-thinker.com/_media/esp8266/esp8266_series_modules_user_manual_v1.1.pdf" H 2900 2700 50  0001 C CNN
-	1    3250 2600
+P 5200 3800
+F 0 "U?" H 5200 4781 50  0000 C CNN
+F 1 "ESP-12F" H 5200 4690 50  0000 C CNN
+F 2 "RF_Module:ESP-12E" H 5200 3800 50  0001 C CNN
+F 3 "http://wiki.ai-thinker.com/_media/esp8266/esp8266_series_modules_user_manual_v1.1.pdf" H 4850 3900 50  0001 C CNN
+	1    5200 3800
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3250 3300 3250 3600
+	5200 4500 5200 4800
 $Comp
 L power:GND #PWR0118
 U 1 1 5E276D81
-P 3250 3600
-F 0 "#PWR0118" H 3250 3350 50  0001 C CNN
-F 1 "GND" H 3255 3427 50  0000 C CNN
-F 2 "" H 3250 3600 50  0001 C CNN
-F 3 "" H 3250 3600 50  0001 C CNN
-	1    3250 3600
+P 5200 4800
+F 0 "#PWR0118" H 5200 4550 50  0001 C CNN
+F 1 "GND" H 5205 4627 50  0000 C CNN
+F 2 "" H 5200 4800 50  0001 C CNN
+F 3 "" H 5200 4800 50  0001 C CNN
+	1    5200 4800
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3850 2100 4300 2100
+	5800 3300 6250 3300
 Wire Wire Line
-	3850 2300 4300 2300
-Text GLabel 4300 2100 2    50   Input ~ 0
+	5800 3500 6250 3500
+Text GLabel 6250 3300 2    50   Input ~ 0
 ESP_TX
-Text GLabel 4300 2300 2    50   Input ~ 0
+Text GLabel 6250 3500 2    50   Input ~ 0
 ESP_RX
 Wire Wire Line
-	3250 1800 3250 1400
+	5200 3000 5200 2600
 Wire Wire Line
-	3250 1400 3650 1400
-Text Label 3350 1400 0    50   ~ 0
+	5200 2600 5600 2600
+Text Label 5300 2600 0    50   ~ 0
 VCC_ESP
 $Comp
 L Device:C C?
@@ -97,8 +97,8 @@ $EndComp
 Text Label 1050 1050 0    50   ~ 0
 VCC_ESP
 Wire Wire Line
-	2650 2000 2250 2000
-Text Label 2250 2000 0    50   ~ 0
+	4600 3200 4200 3200
+Text Label 4200 3200 0    50   ~ 0
 NRST
 Text GLabel 1100 2650 0    50   Input ~ 0
 NRST_ESP
@@ -155,15 +155,50 @@ Wire Wire Line
 	1450 2800 1450 2950
 Text Label 1800 2800 0    50   ~ 0
 NRST
+Text GLabel 3400 3400 0    50   Input ~ 0
+ESP_EN
 $Comp
-L RF:SX1262 U?
-U 1 1 5E2AB46F
-P 7950 2400
-F 0 "U?" H 7945 3172 50  0000 C CNN
-F 1 "SX1262" H 7945 3081 50  0000 C CNN
-F 2 "Package_DFN_QFN:QFN-24_EP_4x4_Pitch0.5mm" H 7950 2300 50  0001 C CNN
-F 3 "" H 7950 2300 50  0001 C CNN
-	1    7950 2400
+L Device:R R?
+U 1 1 5E2FE316
+P 3800 3400
+F 0 "R?" V 3593 3400 50  0000 C CNN
+F 1 "10k" V 3684 3400 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 3730 3400 50  0001 C CNN
+F 3 "~" H 3800 3400 50  0001 C CNN
+	1    3800 3400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3950 3400 4600 3400
+Wire Wire Line
+	3650 3400 3600 3400
+$Comp
+L Device:R R?
+U 1 1 5E303072
+P 3600 3850
+F 0 "R?" H 3530 3804 50  0000 R CNN
+F 1 "10k" H 3530 3895 50  0000 R CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 3530 3850 50  0001 C CNN
+F 3 "~" H 3600 3850 50  0001 C CNN
+	1    3600 3850
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3600 3700 3600 3400
+Connection ~ 3600 3400
+Wire Wire Line
+	3600 3400 3400 3400
+Wire Wire Line
+	3600 4000 3600 4250
+$Comp
+L power:GND #PWR?
+U 1 1 5E303C75
+P 3600 4250
+F 0 "#PWR?" H 3600 4000 50  0001 C CNN
+F 1 "GND" H 3605 4077 50  0000 C CNN
+F 2 "" H 3600 4250 50  0001 C CNN
+F 3 "" H 3600 4250 50  0001 C CNN
+	1    3600 4250
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
