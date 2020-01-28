@@ -388,16 +388,10 @@ F 3 "~" H 1000 1550 50  0001 C CNN
 	1    850  1600
 	1    0    0    -1  
 $EndComp
-Text GLabel 7600 2100 2    50   Input ~ 0
-VCC
 Wire Wire Line
 	1150 1600 1400 1600
 Wire Wire Line
 	1150 1700 1400 1700
-Text GLabel 3750 1550 2    50   Input ~ 0
-USB_D+
-Text GLabel 3750 1750 2    50   Input ~ 0
-USB_D-
 Wire Wire Line
 	750  2000 750  2150
 Wire Wire Line
@@ -451,14 +445,12 @@ F 3 "~" H 1550 1700 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1150 1400 1400 1400
-Text GLabel 2200 750  2    50   Input ~ 0
-VUSB
 $Comp
 L Power_Protection:USBLC6-2SC6 U?
 U 1 1 5E29B9C5
 P 2600 1650
 F 0 "U?" V 2554 2194 50  0000 L CNN
-F 1 "USBLC6-2SC6" V 2645 2194 50  0000 L CNN
+F 1 "USBLC6-2SC6" V 2100 1400 50  0000 L CNN
 F 2 "Package_TO_SOT_SMD:SOT-23-6" H 1850 2050 50  0001 C CNN
 F 3 "http://www2.st.com/resource/en/datasheet/CD00050750.pdf" H 2800 2000 50  0001 C CNN
 	1    2600 1650
@@ -579,8 +571,8 @@ L Device:R R?
 U 1 1 5E2FCA07
 P 1800 4500
 F 0 "R?" H 1870 4546 50  0000 L CNN
-F 1 "R" H 1870 4455 50  0000 L CNN
-F 2 "" V 1730 4500 50  0001 C CNN
+F 1 "10m" H 1870 4455 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 1730 4500 50  0001 C CNN
 F 3 "~" H 1800 4500 50  0001 C CNN
 	1    1800 4500
 	1    0    0    -1  
@@ -626,8 +618,6 @@ Wire Wire Line
 	2700 4200 2600 4200
 Wire Wire Line
 	2700 4100 2600 4100
-Text GLabel 2600 4100 0    50   Input ~ 0
-I2C1_SDA
 Wire Wire Line
 	1500 4750 1800 4750
 Wire Wire Line
@@ -642,8 +632,6 @@ Wire Wire Line
 Connection ~ 1800 4750
 Wire Wire Line
 	1800 4750 2300 4750
-Text GLabel 2600 4200 0    50   Input ~ 0
-I2C1_SCL
 Wire Wire Line
 	3200 4900 3200 5100
 Wire Wire Line
@@ -719,8 +707,6 @@ Wire Wire Line
 Wire Wire Line
 	4100 4300 4150 4300
 Connection ~ 4100 4300
-Text GLabel 4150 4300 2    50   Input ~ 0
-VBAT_LOW_ALERT
 Wire Wire Line
 	3900 4000 5100 4000
 Wire Wire Line
@@ -755,4 +741,38 @@ F 3 "" H 2400 5850 50  0001 C CNN
 	1    2400 5850
 	1    0    0    -1  
 $EndComp
+Text HLabel 2600 4100 0    50   Input ~ 0
+I2C_BAT_SDA
+Text HLabel 2600 4200 0    50   Input ~ 0
+I2C_BAT_SCL
+Text HLabel 7650 2900 2    50   Input ~ 0
+NCHG_BAT
+Text HLabel 4150 4300 2    50   Input ~ 0
+VBAT_LOW_ALERT
+Text HLabel 2200 750  2    50   Input ~ 0
+VUSB
+Text Label 2200 750  2    50   ~ 0
+VUSB
+Text HLabel 7450 3200 0    50   Input ~ 0
+NPGOOD
+Text HLabel 7450 3600 0    50   Input ~ 0
+NCHG
+Text Label 7600 2100 2    50   ~ 0
+VCC
+Text HLabel 7600 2100 2    50   Input ~ 0
+VCC
+Text Label 3750 1550 2    50   ~ 0
+USB_DP
+Text Label 3750 1750 2    50   ~ 0
+USB_DN
+Entry Wire Line
+	3750 1550 3850 1650
+Entry Wire Line
+	3750 1750 3850 1850
+Wire Bus Line
+	3850 2050 4200 2050
+Wire Bus Line
+	3850 1650 3850 2050
+Text HLabel 4200 2050 2    50   Input ~ 0
+USB_DATA
 $EndSCHEMATC

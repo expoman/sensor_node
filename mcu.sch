@@ -28,10 +28,6 @@ Wire Wire Line
 	6300 3300 7400 3300
 Wire Wire Line
 	6300 3400 7400 3400
-Text GLabel 7400 3300 2    50   Input ~ 0
-USB_D-
-Text GLabel 7400 3400 2    50   Input ~ 0
-USB_D+
 Wire Wire Line
 	5900 2000 5900 1250
 Wire Wire Line
@@ -69,8 +65,6 @@ Wire Wire Line
 	6250 800  6250 700 
 Wire Wire Line
 	6250 700  6050 700 
-Text GLabel 6050 700  0    50   Input ~ 0
-VUSB
 $Comp
 L power:GND #PWR0110
 U 1 1 5E232F02
@@ -86,18 +80,10 @@ Wire Wire Line
 	6300 4900 7200 4900
 Wire Wire Line
 	6300 5000 7200 5000
-Text GLabel 7200 4900 2    50   Input ~ 0
-I2C2_SCL
-Text GLabel 7200 5000 2    50   Input ~ 0
-I2C2_SDA
 Wire Wire Line
 	6300 4500 7200 4500
 Wire Wire Line
 	6300 4600 7200 4600
-Text GLabel 7200 4500 2    50   Input ~ 0
-I2C1_SCL
-Text GLabel 7200 4600 2    50   Input ~ 0
-I2C1_SDA
 $Comp
 L Device:Crystal Y?
 U 1 1 5E21E23E
@@ -232,8 +218,6 @@ Connection ~ 5600 1550
 Wire Wire Line
 	5500 1550 5050 1550
 Connection ~ 5500 1550
-Text GLabel 5050 1550 0    50   Input ~ 0
-VCC
 $Comp
 L Device:C C?
 U 1 1 5E234B6F
@@ -378,8 +362,6 @@ F 3 "" H 3700 2200 50  0001 C CNN
 	1    3700 2200
 	1    0    0    -1  
 $EndComp
-Text GLabel 3150 1250 0    50   Input ~ 0
-VDDA
 Wire Wire Line
 	3150 1250 3450 1250
 Connection ~ 3450 1250
@@ -580,17 +562,6 @@ Wire Wire Line
 	4500 2400 5000 2400
 Wire Wire Line
 	4500 2000 4500 1850
-$Comp
-L power:VCC #PWR0117
-U 1 1 5E27475C
-P 4500 1850
-F 0 "#PWR0117" H 4500 1700 50  0001 C CNN
-F 1 "VCC" H 4517 2023 50  0000 C CNN
-F 2 "" H 4500 1850 50  0001 C CNN
-F 3 "" H 4500 1850 50  0001 C CNN
-	1    4500 1850
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	6300 2400 7250 2400
 Wire Wire Line
@@ -601,4 +572,42 @@ Text GLabel 7250 2400 2    50   Input ~ 0
 ESP_RX
 Text GLabel 7250 2500 2    50   Input ~ 0
 ESP_TX
+Text Label 7200 4500 2    50   ~ 0
+I2C1_SCL
+Text Label 7200 4600 2    50   ~ 0
+I2C1_SDA
+Text HLabel 7200 4500 2    50   Input ~ 0
+I2C1_SCL
+Text HLabel 7200 4600 2    50   Input ~ 0
+I2C1_SDA
+Text Label 7200 4900 2    50   ~ 0
+I2C2_SCL
+Text Label 7200 5000 2    50   ~ 0
+I2C2_SDA
+Text HLabel 7200 4900 2    50   Input ~ 0
+I2C2_SCL
+Text HLabel 7200 5000 2    50   Input ~ 0
+I2C2_SDA
+Text HLabel 6050 700  0    50   Input ~ 0
+VUSB
+Text HLabel 5050 1550 0    50   Input ~ 0
+VCC
+Text Label 4500 1850 2    50   ~ 0
+VCC
+Text Label 3150 1250 2    50   ~ 0
+VDDA
+Text Label 7400 3300 2    50   ~ 0
+USB_DN
+Text Label 7400 3400 2    50   ~ 0
+USB_DP
+Wire Bus Line
+	7500 3800 7850 3800
+Wire Bus Line
+	7500 3400 7500 3800
+Entry Wire Line
+	7400 3300 7500 3400
+Entry Wire Line
+	7400 3400 7500 3500
+Text HLabel 7850 3800 2    50   Input ~ 0
+USB
 $EndSCHEMATC

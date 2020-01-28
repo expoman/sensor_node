@@ -41,10 +41,6 @@ Wire Wire Line
 	8100 2100 8850 2100
 Wire Wire Line
 	8100 2200 8850 2200
-Text GLabel 8850 2100 2    50   Input ~ 0
-I2C_SENSORS_SDA
-Text GLabel 8850 2200 2    50   Input ~ 0
-I2C_SENSORS_SCK
 Wire Wire Line
 	7600 1800 7600 850 
 Text Label 6400 850  0    50   ~ 0
@@ -164,10 +160,6 @@ F 3 "" H 2350 1600 50  0001 C CNN
 $EndComp
 Text Label 2400 950  0    50   ~ 0
 VCC_SENSORS
-Text GLabel 3250 2250 2    50   Input ~ 0
-I2C_SENSORS_SCK
-Text GLabel 3250 2450 2    50   Input ~ 0
-I2C_SENSORS_SDA
 Wire Wire Line
 	2400 2650 3050 2650
 Wire Wire Line
@@ -222,4 +214,18 @@ F 3 "~" H 3250 1700 50  0001 C CNN
 	1    3250 1700
 	0    1    1    0   
 $EndComp
+Text Label 2600 2250 0    50   ~ 0
+I2C_SENSOR_SCL
+Text Label 2600 2450 0    50   ~ 0
+I2C_SENSOR_SDA
+Text HLabel 3250 2250 2    50   Input ~ 0
+I2C_SENSOR_SCL
+Text HLabel 3250 2450 2    50   Input ~ 0
+I2C_SENSOR_SDA
+Text Label 8850 2100 2    50   ~ 0
+I2C_SENSOR_SDA
+Text Label 8850 2200 2    50   ~ 0
+I2C_SENSOR_SCL
+Text HLabel 6400 850  0    50   Input ~ 0
+VCC_SENSORS
 $EndSCHEMATC
