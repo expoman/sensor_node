@@ -27,13 +27,13 @@ F7 "I2C2_SDA" I R 4900 1850 50
 F8 "USB" I R 4900 1300 50 
 $EndSheet
 $Sheet
-S 5450 1050 1050 1150
+S 6050 1100 1050 1150
 U 5E269FC3
 F0 "wireless" 50
 F1 "wireless.sch" 50
 $EndSheet
 $Sheet
-S 7400 1100 1050 850 
+S 8100 1100 1050 850 
 U 5E27DC26
 F0 "sensor_connectors" 50
 F1 "sensor_connectors.sch" 50
@@ -82,4 +82,54 @@ Wire Bus Line
 	5250 850  5250 1300
 Wire Bus Line
 	5250 1300 4900 1300
+Wire Wire Line
+	4900 1850 5150 1850
+Wire Wire Line
+	4900 1950 5150 1950
+Entry Wire Line
+	5150 1850 5250 1950
+Entry Wire Line
+	5150 1950 5250 2050
+Wire Bus Line
+	5250 2650 4750 2650
+Text Label 5100 1850 2    50   ~ 0
+SDA
+Text Label 5100 1950 2    50   ~ 0
+SCL
+Text Label 4800 2650 0    50   ~ 0
+I2C2
+Wire Wire Line
+	2550 4500 2800 4500
+Wire Wire Line
+	2550 4600 2800 4600
+Wire Wire Line
+	2900 1700 3100 1700
+Wire Wire Line
+	2900 1600 3100 1600
+Entry Wire Line
+	3100 1600 3200 1700
+Entry Wire Line
+	3100 1700 3200 1800
+Entry Wire Line
+	2800 4500 2900 4600
+Entry Wire Line
+	2800 4600 2900 4700
+Wire Bus Line
+	3200 1900 3550 1900
+Wire Bus Line
+	2900 4850 3300 4850
+Text Label 3550 1900 2    50   ~ 0
+I2C2
+Text Label 3300 4850 2    50   ~ 0
+I2C2
+Wire Wire Line
+	2550 3750 3150 3750
+Text Label 3150 3750 2    50   ~ 0
+VCC_3V3
+Wire Bus Line
+	5250 1950 5250 2650
+Wire Bus Line
+	3200 1700 3200 1900
+Wire Bus Line
+	2900 4600 2900 4850
 $EndSCHEMATC
