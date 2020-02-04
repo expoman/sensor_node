@@ -43,28 +43,33 @@ F 3 "" H 1900 1150 50  0001 C CNN
 	1    1900 1150
 	-1   0    0    1   
 $EndComp
-Text Label 1500 1450 0    50   ~ 0
-VCC_1WIRE
-Text GLabel 2400 1350 2    50   Input ~ 0
-D0_1WIRE
 $Comp
 L Device:R R13
 U 1 1 5E27EC66
-P 2200 1600
-F 0 "R13" H 2270 1646 50  0000 L CNN
-F 1 "4.7k" H 2270 1555 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 2130 1600 50  0001 C CNN
-F 3 "~" H 2200 1600 50  0001 C CNN
-	1    2200 1600
+P 2200 1550
+F 0 "R13" H 2270 1596 50  0000 L CNN
+F 1 "4.7k" H 2270 1505 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 2130 1550 50  0001 C CNN
+F 3 "~" H 2200 1550 50  0001 C CNN
+	1    2200 1550
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2200 1450 2200 1350
+	2200 1400 2200 1350
 Connection ~ 2200 1350
 Wire Wire Line
 	2200 1350 2400 1350
 Wire Wire Line
-	2200 1750 1900 1750
-Wire Wire Line
 	1900 1750 1900 1450
+Text HLabel 2400 1350 2    50   Input ~ 0
+1WIRE0_EXT_DATA
+Wire Wire Line
+	1900 1750 2200 1750
+Wire Wire Line
+	2200 1750 2200 1700
+Wire Wire Line
+	2200 1750 2400 1750
+Connection ~ 2200 1750
+Text HLabel 2400 1750 2    50   Input ~ 0
+1WIRE_VCC
 $EndSCHEMATC

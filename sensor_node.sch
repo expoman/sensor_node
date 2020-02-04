@@ -31,12 +31,18 @@ S 6050 1100 1050 1150
 U 5E269FC3
 F0 "wireless" 50
 F1 "wireless.sch" 50
+F2 "ESP_NRST" I R 7100 1400 50 
+F3 "ESP_EN" I R 7100 1300 50 
+F4 "ESP_TX" I R 7100 1500 50 
+F5 "ESP_RX" I R 7100 1600 50 
+F6 "VCC" I L 6050 1300 50 
 $EndSheet
 $Sheet
 S 8100 1100 1050 850 
 U 5E27DC26
 F0 "sensor_connectors" 50
 F1 "sensor_connectors.sch" 50
+F2 "1WIRE0_EXT_DATA" I L 8100 1250 50 
 $EndSheet
 $Sheet
 S 1250 3650 1300 1200
@@ -46,6 +52,7 @@ F1 "sensors.sch" 50
 F2 "I2C_SENSOR_SCL" I R 2550 4600 50 
 F3 "I2C_SENSOR_SDA" I R 2550 4500 50 
 F4 "VCC_SENSORS" I R 2550 3750 50 
+F5 "LIGHTSENSOR_INT" I R 2550 4300 50 
 $EndSheet
 Text Notes 1200 1600 0    50   ~ 0
 unregulated from charger

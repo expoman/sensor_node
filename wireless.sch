@@ -41,10 +41,6 @@ Wire Wire Line
 	5800 3300 6250 3300
 Wire Wire Line
 	5800 3500 6250 3500
-Text GLabel 6250 3300 2    50   Input ~ 0
-ESP_TX
-Text GLabel 6250 3500 2    50   Input ~ 0
-ESP_RX
 Wire Wire Line
 	5200 3000 5200 2600
 Wire Wire Line
@@ -100,8 +96,6 @@ Wire Wire Line
 	4600 3200 4200 3200
 Text Label 4200 3200 0    50   ~ 0
 NRST
-Text GLabel 1100 2650 0    50   Input ~ 0
-NRST_ESP
 $Comp
 L Device:R R10
 U 1 1 5E279741
@@ -155,8 +149,6 @@ Wire Wire Line
 	1450 2800 1450 2950
 Text Label 1800 2800 0    50   ~ 0
 NRST
-Text GLabel 3400 3400 0    50   Input ~ 0
-ESP_EN
 $Comp
 L Device:R R12
 U 1 1 5E2FE316
@@ -201,4 +193,14 @@ F 3 "" H 3600 4250 50  0001 C CNN
 	1    3600 4250
 	1    0    0    -1  
 $EndComp
+Text HLabel 1100 2650 0    50   Input ~ 0
+ESP_NRST
+Text HLabel 3400 3400 0    50   Input ~ 0
+ESP_EN
+Text HLabel 6250 3300 2    50   Input ~ 0
+ESP_TX
+Text HLabel 6250 3500 2    50   Input ~ 0
+ESP_RX
+Text HLabel 1050 1050 0    50   Input ~ 0
+VCC
 $EndSCHEMATC
