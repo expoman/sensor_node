@@ -681,7 +681,7 @@ F 3 "" H 5100 4650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Label 4800 4000 0    50   ~ 0
-VCC_1.8V
+VCC_GAUGE_1V8
 Wire Wire Line
 	3900 4300 4100 4300
 $Comp
@@ -773,6 +773,129 @@ Wire Bus Line
 	3850 2050 4200 2050
 Text HLabel 4200 2050 2    50   Input ~ 0
 USB_DATA
+$Comp
+L Regulator_Switching:TPS826711 U?
+U 1 1 5E3CE725
+P 4500 6350
+F 0 "U?" H 4500 6775 50  0000 C CNN
+F 1 "TPS826711" H 4500 6684 50  0000 C CNN
+F 2 "" H 4500 6350 50  0001 C CNN
+F 3 "" H 4500 6350 50  0001 C CNN
+	1    4500 6350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4100 6150 3900 6150
+Wire Wire Line
+	4100 6350 3600 6350
+Wire Wire Line
+	4900 6150 5300 6150
+Wire Wire Line
+	4900 6350 5050 6350
+$Comp
+L power:GND #PWR?
+U 1 1 5E3F94FF
+P 5050 6750
+F 0 "#PWR?" H 5050 6500 50  0001 C CNN
+F 1 "GND" H 5055 6577 50  0000 C CNN
+F 2 "" H 5050 6750 50  0001 C CNN
+F 3 "" H 5050 6750 50  0001 C CNN
+	1    5050 6750
+	1    0    0    -1  
+$EndComp
+Text Label 5400 6150 2    50   ~ 0
+VCC_1V8
+Text HLabel 5400 6150 2    50   Input ~ 0
+VCC_1V8
+Text Label 3600 6150 0    50   ~ 0
+VCC
+Text Label 3600 6350 0    50   ~ 0
+MODE_1V8
+Wire Wire Line
+	4100 6250 3900 6250
+Wire Wire Line
+	3900 6250 3900 6150
+Connection ~ 3900 6150
+$Comp
+L Device:C C?
+U 1 1 5E4030B4
+P 3350 6400
+F 0 "C?" H 3465 6446 50  0000 L CNN
+F 1 "C" H 3465 6355 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 3388 6250 50  0001 C CNN
+F 3 "~" H 3350 6400 50  0001 C CNN
+	1    3350 6400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C?
+U 1 1 5E403917
+P 3000 6400
+F 0 "C?" H 3118 6446 50  0000 L CNN
+F 1 "CP" H 3118 6355 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 3038 6250 50  0001 C CNN
+F 3 "~" H 3000 6400 50  0001 C CNN
+	1    3000 6400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3350 6250 3350 6150
+Wire Wire Line
+	3350 6150 3900 6150
+Wire Wire Line
+	3000 6250 3000 6150
+Wire Wire Line
+	3000 6150 3350 6150
+Connection ~ 3350 6150
+Wire Wire Line
+	3000 6550 3000 6650
+Wire Wire Line
+	3350 6550 3350 6650
+$Comp
+L power:GND #PWR?
+U 1 1 5E421201
+P 3000 6650
+F 0 "#PWR?" H 3000 6400 50  0001 C CNN
+F 1 "GND" H 3005 6477 50  0000 C CNN
+F 2 "" H 3000 6650 50  0001 C CNN
+F 3 "" H 3000 6650 50  0001 C CNN
+	1    3000 6650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E421499
+P 3350 6650
+F 0 "#PWR?" H 3350 6400 50  0001 C CNN
+F 1 "GND" H 3355 6477 50  0000 C CNN
+F 2 "" H 3350 6650 50  0001 C CNN
+F 3 "" H 3350 6650 50  0001 C CNN
+	1    3350 6650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C?
+U 1 1 5E428524
+P 5300 6400
+F 0 "C?" H 5418 6446 50  0000 L CNN
+F 1 "CP" H 5418 6355 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 5338 6250 50  0001 C CNN
+F 3 "~" H 5300 6400 50  0001 C CNN
+	1    5300 6400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5300 6250 5300 6150
+Connection ~ 5300 6150
+Wire Wire Line
+	5300 6150 5400 6150
+Wire Wire Line
+	5050 6350 5050 6550
+Wire Wire Line
+	5300 6550 5050 6550
 Wire Bus Line
 	3850 1650 3850 2050
+Connection ~ 5050 6550
+Wire Wire Line
+	5050 6550 5050 6750
 $EndSCHEMATC
