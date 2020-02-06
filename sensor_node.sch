@@ -148,12 +148,12 @@ Text Label 3350 1350 0    50   ~ 0
 VCC_1V8
 Wire Wire Line
 	6100 1300 5650 1300
+Text Label 5650 1300 0    50   ~ 0
+VCC_1V8
 Wire Bus Line
 	5250 1950 5250 2650
 Wire Bus Line
 	3200 1700 3200 1900
 Wire Bus Line
 	2900 4600 2900 4850
-Text Label 5650 1300 0    50   ~ 0
-VCC_1V8
 $EndSCHEMATC
