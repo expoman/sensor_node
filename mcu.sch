@@ -568,10 +568,6 @@ Wire Wire Line
 	6300 2500 7250 2500
 Text Notes 6400 2500 0    50   ~ 0
 PA2: USART2_TX\nPA3: USART2_RX
-Text GLabel 7250 2400 2    50   Input ~ 0
-ESP_RX
-Text GLabel 7250 2500 2    50   Input ~ 0
-ESP_TX
 Text Label 7200 4500 2    50   ~ 0
 I2C1_SCL
 Text Label 7200 4600 2    50   ~ 0
@@ -692,4 +688,8 @@ Text Label 10500 5400 2    50   ~ 0
 I2C2_SDA
 Wire Bus Line
 	7500 3400 7500 3800
+Text HLabel 7250 2400 2    50   Input ~ 0
+EXP_RX
+Text HLabel 7250 2500 2    50   Input ~ 0
+ESP_TX
 $EndSCHEMATC
