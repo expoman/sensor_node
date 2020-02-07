@@ -1,4 +1,4 @@
-16572977532984171
+16577720656629171
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -54411,6 +54411,20 @@ BGA 180 0.4
 180
 180
 Package_CSP
+Texas_SIP0009F_MicroSiP-8_2.3x2.9mm_P0.8mm
+
+
+0
+8
+8
+Package_CSP
+Texas_SIP0009F_MicroSiP-9_2.3x2.9mm_P0.8mm
+
+
+0
+9
+9
+Package_CSP
 WLCSP-6_1.4x1.0mm_P0.4mm
 6pin Pitch 0.4mm
 6pin Pitch 0.4mm WLCSP
@@ -59709,6 +59723,13 @@ Texas MicroSiP NoLead
 0
 16
 9
+Package_LGA
+Texas_SIL0008E_MicroSip-8-2EP_3.5x3.5mm_P0.8mm_EP0.8x1.9mm
+
+
+0
+10
+10
 Package_LGA
 Texas_SIL0010A_MicroSiP-10-1EP_3.8x3mm_P0.6mm_EP0.7x2.9mm
 Texas SIL0010A MicroSiP, 10 Pin (http://www.ti.com/lit/ml/mpds579b/mpds579b.pdf), generated with kicad-footprint-generator ipc_noLead_generator.py
