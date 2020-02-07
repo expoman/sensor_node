@@ -25,10 +25,6 @@ F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/da
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6300 3300 7400 3300
-Wire Wire Line
-	6300 3400 7400 3400
-Wire Wire Line
 	5900 2000 5900 1250
 Wire Wire Line
 	5900 1250 6250 1250
@@ -77,13 +73,13 @@ F 3 "" H 6250 1750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6300 4900 7200 4900
+	6300 4900 6700 4900
 Wire Wire Line
-	6300 5000 7200 5000
+	6300 5000 6700 5000
 Wire Wire Line
-	6300 4500 7200 4500
+	6300 4500 6700 4500
 Wire Wire Line
-	6300 4600 7200 4600
+	6300 4600 6700 4600
 $Comp
 L Device:Crystal Y1
 U 1 1 5E21E23E
@@ -502,13 +498,11 @@ Wire Wire Line
 	10350 1450 10350 1350
 Text Label 10500 1450 0    50   ~ 0
 NRST
-Wire Wire Line
-	6300 3600 7400 3600
-Text Label 7150 3600 0    50   ~ 0
+Text Label 6450 3600 0    50   ~ 0
 SWCLK
 Wire Wire Line
-	6300 3500 7400 3500
-Text Label 7150 3500 0    50   ~ 0
+	6300 3500 6750 3500
+Text Label 6450 3500 0    50   ~ 0
 SWDIO
 $Comp
 L Connector:Conn_01x06_Male J1
@@ -563,26 +557,26 @@ Wire Wire Line
 Wire Wire Line
 	4500 2000 4500 1850
 Wire Wire Line
-	6300 2400 7250 2400
+	6300 2400 6700 2400
 Wire Wire Line
-	6300 2500 7250 2500
+	6300 2500 6900 2500
 Text Notes 6400 2500 0    50   ~ 0
 PA2: USART2_TX\nPA3: USART2_RX
-Text Label 7200 4500 2    50   ~ 0
+Text Label 6700 4500 2    50   ~ 0
 I2C1_SCL
-Text Label 7200 4600 2    50   ~ 0
+Text Label 6700 4600 2    50   ~ 0
 I2C1_SDA
-Text HLabel 7200 4500 2    50   Input ~ 0
+Text HLabel 6700 4500 2    50   Input ~ 0
 I2C1_SCL
-Text HLabel 7200 4600 2    50   Input ~ 0
+Text HLabel 6700 4600 2    50   Input ~ 0
 I2C1_SDA
-Text Label 7200 4900 2    50   ~ 0
+Text Label 6700 4900 2    50   ~ 0
 I2C2_SCL
-Text Label 7200 5000 2    50   ~ 0
+Text Label 6700 5000 2    50   ~ 0
 I2C2_SDA
-Text HLabel 7200 4900 2    50   Input ~ 0
+Text HLabel 6700 4900 2    50   Input ~ 0
 I2C2_SCL
-Text HLabel 7200 5000 2    50   Input ~ 0
+Text HLabel 6700 5000 2    50   Input ~ 0
 I2C2_SDA
 Text HLabel 6050 700  0    50   Input ~ 0
 VUSB
@@ -592,17 +586,15 @@ Text Label 4500 1850 2    50   ~ 0
 VCC
 Text Label 3150 1250 2    50   ~ 0
 VDDA
-Text Label 7400 3300 2    50   ~ 0
+Text Label 6750 3300 2    50   ~ 0
 USB_DN
-Text Label 7400 3400 2    50   ~ 0
+Text Label 6750 3400 2    50   ~ 0
 USB_DP
-Wire Bus Line
-	7500 3800 7850 3800
 Entry Wire Line
-	7400 3300 7500 3400
+	7050 3300 7150 3400
 Entry Wire Line
-	7400 3400 7500 3500
-Text HLabel 7850 3800 2    50   Input ~ 0
+	7050 3400 7150 3500
+Text HLabel 7850 3650 2    50   Input ~ 0
 USB
 $Comp
 L Device:R R5
@@ -686,10 +678,294 @@ Text Label 10500 5100 2    50   ~ 0
 I2C2_SCL
 Text Label 10500 5400 2    50   ~ 0
 I2C2_SDA
-Wire Bus Line
-	7500 3400 7500 3800
-Text HLabel 7250 2400 2    50   Input ~ 0
+Text HLabel 6700 1950 2    50   Input ~ 0
 EXP_RX
-Text HLabel 7250 2500 2    50   Input ~ 0
+Text HLabel 6900 2100 2    50   Input ~ 0
 ESP_TX
+Wire Wire Line
+	5000 3900 4650 3900
+Wire Wire Line
+	5000 4000 4650 4000
+Wire Wire Line
+	5000 4100 4650 4100
+Wire Wire Line
+	5000 4200 4650 4200
+Wire Wire Line
+	5000 4300 4650 4300
+Wire Wire Line
+	5000 4400 4650 4400
+Wire Wire Line
+	5000 4500 4650 4500
+Wire Wire Line
+	5000 4600 4650 4600
+Wire Wire Line
+	5000 4700 4650 4700
+Wire Wire Line
+	5000 4800 4650 4800
+Wire Wire Line
+	5000 4900 4650 4900
+Wire Wire Line
+	5000 5000 4650 5000
+Wire Wire Line
+	5000 5100 4650 5100
+Wire Wire Line
+	5000 5200 4650 5200
+Wire Wire Line
+	5000 5300 4650 5300
+Wire Wire Line
+	5000 5400 4650 5400
+Entry Wire Line
+	4650 5400 4550 5500
+Entry Wire Line
+	4650 5300 4550 5400
+Entry Wire Line
+	4650 5200 4550 5300
+Entry Wire Line
+	4650 5100 4550 5200
+Entry Wire Line
+	4650 5000 4550 5100
+Entry Wire Line
+	4650 4900 4550 5000
+Entry Wire Line
+	4650 4800 4550 4900
+Entry Wire Line
+	4650 4700 4550 4800
+Entry Wire Line
+	4650 4600 4550 4700
+Entry Wire Line
+	4650 4500 4550 4600
+Entry Wire Line
+	4650 4400 4550 4500
+Entry Wire Line
+	4650 4300 4550 4400
+Entry Wire Line
+	4650 4200 4550 4300
+Entry Wire Line
+	4650 4100 4550 4200
+Entry Wire Line
+	4650 4000 4550 4100
+Entry Wire Line
+	4650 3900 4550 4000
+Wire Bus Line
+	4550 5600 4000 5600
+Text HLabel 4000 5600 0    50   Input ~ 0
+STM32_PCx
+Text Label 4700 3900 0    50   ~ 0
+PC0
+Text Label 4700 4000 0    50   ~ 0
+PC1
+Text Label 4700 4100 0    50   ~ 0
+PC2
+Text Label 4700 4200 0    50   ~ 0
+PC3
+Text Label 4700 4300 0    50   ~ 0
+PC4
+Text Label 4700 4400 0    50   ~ 0
+PC5
+Text Label 4700 4500 0    50   ~ 0
+PC6
+Text Label 4700 4600 0    50   ~ 0
+PC7
+Text Label 4700 4700 0    50   ~ 0
+PC8
+Text Label 4700 4800 0    50   ~ 0
+PC9
+Text Label 4700 4900 0    50   ~ 0
+PC10
+Text Label 4700 5000 0    50   ~ 0
+PC11
+Text Label 4700 5100 0    50   ~ 0
+PC12
+Text Label 4700 5200 0    50   ~ 0
+PC13
+Text Label 4700 5300 0    50   ~ 0
+PC14
+Text Label 4700 5400 0    50   ~ 0
+PC15
+Wire Wire Line
+	6300 2200 7050 2200
+Wire Wire Line
+	6300 2300 7050 2300
+Wire Wire Line
+	6300 2600 7050 2600
+Wire Wire Line
+	6300 2700 7050 2700
+Wire Wire Line
+	6300 2800 7050 2800
+Wire Wire Line
+	6300 2900 7050 2900
+Wire Wire Line
+	6300 3000 7050 3000
+Wire Wire Line
+	6300 3100 7050 3100
+Wire Wire Line
+	6300 3200 7050 3200
+Wire Wire Line
+	6300 3700 7050 3700
+Entry Wire Line
+	7050 2200 7150 2300
+Entry Wire Line
+	7050 2600 7150 2700
+Entry Wire Line
+	7050 2700 7150 2800
+Entry Wire Line
+	7050 2800 7150 2900
+Entry Wire Line
+	7050 2900 7150 3000
+Entry Wire Line
+	7050 3000 7150 3100
+Entry Wire Line
+	7050 3100 7150 3200
+Wire Wire Line
+	6700 2400 6700 1950
+Wire Wire Line
+	6900 2500 6900 2100
+Connection ~ 6700 2400
+Wire Wire Line
+	6700 2400 7050 2400
+Wire Wire Line
+	6900 2500 7050 2500
+Connection ~ 6900 2500
+Entry Wire Line
+	7050 2300 7150 2400
+Entry Wire Line
+	7050 2400 7150 2500
+Entry Wire Line
+	7050 2500 7150 2600
+Wire Wire Line
+	6300 3600 6750 3600
+Entry Wire Line
+	7050 3700 7150 3800
+Wire Wire Line
+	6300 3400 7050 3400
+Wire Wire Line
+	6300 3300 7050 3300
+Entry Wire Line
+	7050 3200 7150 3300
+Wire Bus Line
+	7150 3650 7850 3650
+Wire Bus Line
+	7150 3350 7750 3350
+Text Label 7750 3350 2    50   ~ 0
+STM_PAx
+Wire Bus Line
+	7150 3800 7150 3850
+Wire Bus Line
+	7150 3850 7750 3850
+Text Label 7750 3850 2    50   ~ 0
+STM_PAx
+Text Label 7050 2200 2    50   ~ 0
+PA0
+Text Label 7050 2300 2    50   ~ 0
+PA1
+Text Label 7050 2600 2    50   ~ 0
+SPI1_NSS
+Text Label 6900 2700 2    50   ~ 0
+SPI1_SCK
+Text Label 6900 2800 2    50   ~ 0
+SPI1_MISO
+Text Label 6900 2900 2    50   ~ 0
+SPI1_MOSI
+Text Label 6900 3000 0    50   ~ 0
+PA8
+Text Label 6900 3100 0    50   ~ 0
+PA9
+Text Label 6850 3200 0    50   ~ 0
+PA10
+Text Label 6850 3700 0    50   ~ 0
+PA15
+Text Label 7050 2500 2    50   ~ 0
+PA3
+Text Label 7050 2400 2    50   ~ 0
+PA2
+Wire Wire Line
+	6300 3900 6850 3900
+Wire Wire Line
+	6300 4000 6850 4000
+Wire Wire Line
+	6300 4100 6850 4100
+Wire Wire Line
+	6300 4200 6850 4200
+Wire Wire Line
+	6300 4300 6850 4300
+Wire Wire Line
+	6300 4400 6850 4400
+Wire Wire Line
+	6300 4700 6850 4700
+Wire Wire Line
+	6300 4800 6850 4800
+Wire Wire Line
+	6300 5100 6850 5100
+Wire Wire Line
+	6300 5200 6850 5200
+Wire Wire Line
+	6300 5300 6850 5300
+Wire Wire Line
+	6300 5400 6850 5400
+Text Label 6650 5400 0    50   ~ 0
+PB15
+Text Label 6650 5300 0    50   ~ 0
+PB14
+Text Label 6650 5200 0    50   ~ 0
+PB13
+Text Label 6650 5100 0    50   ~ 0
+PB12
+Text Label 6700 4800 0    50   ~ 0
+PB9
+Text Label 6700 4400 0    50   ~ 0
+PB5
+Text Label 6700 4300 0    50   ~ 0
+PB4
+Text Label 6700 4200 0    50   ~ 0
+PB3
+Text Label 6700 4100 0    50   ~ 0
+PB2
+Text Label 6700 4000 0    50   ~ 0
+PB1
+Text Label 6700 3900 0    50   ~ 0
+PB0
+Entry Wire Line
+	6850 3900 6950 4000
+Entry Wire Line
+	6850 4000 6950 4100
+Entry Wire Line
+	6850 4100 6950 4200
+Entry Wire Line
+	6850 4200 6950 4300
+Entry Wire Line
+	6850 4300 6950 4400
+Entry Wire Line
+	6850 4400 6950 4500
+Entry Wire Line
+	6850 4700 6950 4800
+Entry Wire Line
+	6850 4800 6950 4900
+Entry Wire Line
+	6850 5100 6950 5200
+Entry Wire Line
+	6850 5200 6950 5300
+Entry Wire Line
+	6850 5300 6950 5400
+Entry Wire Line
+	6850 5400 6950 5500
+Wire Bus Line
+	6950 5600 7650 5600
+Wire Bus Line
+	7150 3400 7150 3650
+Wire Bus Line
+	7150 2300 7150 3350
+Wire Bus Line
+	6950 4000 6950 5600
+Wire Bus Line
+	4550 4000 4550 5600
+Text Label 7650 5600 2    50   ~ 0
+STM_PBx
+Text Label 4050 5600 0    50   ~ 0
+STM_PCx
+Text HLabel 7650 5600 2    50   Input ~ 0
+STM_PBx
+Text HLabel 7750 3850 2    50   Input ~ 0
+STM_PAx
+Text Label 6700 4700 0    50   ~ 0
+PB8
 $EndSCHEMATC

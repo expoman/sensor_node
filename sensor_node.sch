@@ -178,14 +178,14 @@ Wire Wire Line
 	7100 1500 7500 1500
 Wire Wire Line
 	7100 1600 7500 1600
+Text Label 7500 1600 2    50   ~ 0
+ESP_TX
+Text Label 7500 1500 2    50   ~ 0
+ESP_RX
 Wire Bus Line
 	5650 1950 5650 2650
 Wire Bus Line
 	3200 1700 3200 1900
 Wire Bus Line
 	2900 4600 2900 4850
-Text Label 7500 1600 2    50   ~ 0
-ESP_TX
-Text Label 7500 1500 2    50   ~ 0
-ESP_RX
 $EndSCHEMATC
