@@ -71,5 +71,5 @@ Wire Wire Line
 	2200 1750 2400 1750
 Connection ~ 2200 1750
 Text HLabel 2400 1750 2    50   Input ~ 0
-1WIRE_VCC
+VCC_3V3
 $EndSCHEMATC
