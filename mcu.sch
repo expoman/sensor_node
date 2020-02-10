@@ -59,8 +59,6 @@ Wire Wire Line
 Connection ~ 6250 1250
 Wire Wire Line
 	6250 800  6250 700 
-Wire Wire Line
-	6250 700  6050 700 
 $Comp
 L power:GND #PWR0110
 U 1 1 5E232F02
@@ -562,13 +560,9 @@ Wire Wire Line
 	6300 2500 6900 2500
 Text Notes 6400 2500 0    50   ~ 0
 PA2: USART2_TX\nPA3: USART2_RX
-Text Label 6700 4500 2    50   ~ 0
+Text HLabel 6850 4700 2    50   Input ~ 0
 I2C1_SCL
-Text Label 6700 4600 2    50   ~ 0
-I2C1_SDA
-Text HLabel 6700 4500 2    50   Input ~ 0
-I2C1_SCL
-Text HLabel 6700 4600 2    50   Input ~ 0
+Text HLabel 6850 4800 2    50   Input ~ 0
 I2C1_SDA
 Text Label 6700 4900 2    50   ~ 0
 I2C2_SCL
@@ -578,8 +572,6 @@ Text HLabel 6700 4900 2    50   Input ~ 0
 I2C2_SCL
 Text HLabel 6700 5000 2    50   Input ~ 0
 I2C2_SDA
-Text HLabel 6050 700  0    50   Input ~ 0
-VUSB
 Text HLabel 5050 1550 0    50   Input ~ 0
 VCC
 Text Label 4500 1850 2    50   ~ 0
@@ -910,8 +902,6 @@ Text Label 6650 5200 0    50   ~ 0
 PB13
 Text Label 6650 5100 0    50   ~ 0
 PB12
-Text Label 6700 4800 0    50   ~ 0
-PB9
 Text Label 6700 4400 0    50   ~ 0
 PB5
 Text Label 6700 4300 0    50   ~ 0
@@ -937,10 +927,6 @@ Entry Wire Line
 Entry Wire Line
 	6850 4400 6950 4500
 Entry Wire Line
-	6850 4700 6950 4800
-Entry Wire Line
-	6850 4800 6950 4900
-Entry Wire Line
 	6850 5100 6950 5200
 Entry Wire Line
 	6850 5200 6950 5300
@@ -950,14 +936,6 @@ Entry Wire Line
 	6850 5400 6950 5500
 Wire Bus Line
 	6950 5600 7650 5600
-Wire Bus Line
-	7150 3400 7150 3650
-Wire Bus Line
-	7150 2300 7150 3350
-Wire Bus Line
-	6950 4000 6950 5600
-Wire Bus Line
-	4550 4000 4550 5600
 Text Label 7650 5600 2    50   ~ 0
 STM_PBx
 Text Label 4050 5600 0    50   ~ 0
@@ -966,6 +944,28 @@ Text HLabel 7650 5600 2    50   Input ~ 0
 STM_PBx
 Text HLabel 7750 3850 2    50   Input ~ 0
 STM_PAx
-Text Label 6700 4700 0    50   ~ 0
-PB8
+Text Label 6250 700  0    50   ~ 0
+VUSB
+Wire Wire Line
+	6250 700  6600 700 
+Entry Wire Line
+	6600 700  6700 800 
+Wire Bus Line
+	6700 800  7000 800 
+Wire Bus Line
+	7150 3400 7150 3650
+Wire Bus Line
+	7150 2300 7150 3350
+Wire Bus Line
+	6950 4000 6950 5600
+Wire Bus Line
+	4550 4000 4550 5600
+Text Label 7000 800  2    50   ~ 0
+USB
+Text Label 7800 3650 2    50   ~ 0
+USB
+Text Label 6700 4500 2    50   ~ 0
+USART1_TX
+Text Label 6700 4600 2    50   ~ 0
+USART1_RX
 $EndSCHEMATC

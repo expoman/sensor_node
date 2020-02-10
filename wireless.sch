@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 6
+Sheet 6 6
 Title ""
 Date ""
 Rev ""
@@ -203,4 +203,179 @@ Text HLabel 6250 3500 2    50   Input ~ 0
 ESP_RX
 Text HLabel 1050 1050 0    50   Input ~ 0
 VCC
+$Comp
+L Connector:Conn_01x06_Male J5
+U 1 1 5E43A077
+P 9500 1550
+F 0 "J5" H 9472 1524 50  0000 R CNN
+F 1 "Conn_01x06_Male" H 9472 1433 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 9500 1550 50  0001 C CNN
+F 3 "~" H 9500 1550 50  0001 C CNN
+	1    9500 1550
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	9300 1350 8750 1350
+Wire Wire Line
+	9300 1650 8750 1650
+Text Label 8750 1350 0    50   ~ 0
+ESP_TX
+Text Label 8750 1450 0    50   ~ 0
+ESP_DTR
+Text Label 8750 1550 0    50   ~ 0
+ESP_RTS
+Text Label 8750 1650 0    50   ~ 0
+ESP_RX
+Wire Wire Line
+	9300 1850 9000 1850
+Wire Wire Line
+	9000 1850 9000 2050
+$Comp
+L power:GND #PWR0138
+U 1 1 5E43DAC1
+P 9000 2050
+F 0 "#PWR0138" H 9000 1800 50  0001 C CNN
+F 1 "GND" H 9005 1877 50  0000 C CNN
+F 2 "" H 9000 2050 50  0001 C CNN
+F 3 "" H 9000 2050 50  0001 C CNN
+	1    9000 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R34
+U 1 1 5E43DCA0
+P 8450 1450
+F 0 "R34" V 8243 1450 50  0000 C CNN
+F 1 "R" V 8334 1450 50  0000 C CNN
+F 2 "Resistor_SMD:R_0612_1632Metric" V 8380 1450 50  0001 C CNN
+F 3 "~" H 8450 1450 50  0001 C CNN
+	1    8450 1450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8600 1450 9300 1450
+$Comp
+L Device:Q_NMOS_DGS Q1
+U 1 1 5E43EBBB
+P 7900 1250
+F 0 "Q1" H 8105 1296 50  0000 L CNN
+F 1 "Q_NMOS_DGS" H 8105 1205 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 8100 1350 50  0001 C CNN
+F 3 "~" H 7900 1250 50  0001 C CNN
+	1    7900 1250
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	7800 1050 7800 1000
+Wire Wire Line
+	7800 1000 7400 1000
+Text Label 7400 1000 0    50   ~ 0
+NRST
+Wire Wire Line
+	7800 1550 7800 1450
+Wire Wire Line
+	7800 1550 8700 1550
+Wire Wire Line
+	8100 1250 8200 1250
+Wire Wire Line
+	8200 1250 8200 1450
+Wire Wire Line
+	8200 1450 8300 1450
+$Comp
+L Device:Q_NMOS_DGS Q2
+U 1 1 5E4430E5
+P 7900 1950
+F 0 "Q2" H 8105 1996 50  0000 L CNN
+F 1 "Q_NMOS_DGS" H 8105 1905 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 8100 2050 50  0001 C CNN
+F 3 "~" H 7900 1950 50  0001 C CNN
+	1    7900 1950
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:R R33
+U 1 1 5E4445C7
+P 8400 1950
+F 0 "R33" V 8193 1950 50  0000 C CNN
+F 1 "R" V 8284 1950 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 8330 1950 50  0001 C CNN
+F 3 "~" H 8400 1950 50  0001 C CNN
+	1    8400 1950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8700 1550 8700 1950
+Wire Wire Line
+	8700 1950 8550 1950
+Connection ~ 8700 1550
+Wire Wire Line
+	8700 1550 9300 1550
+Wire Wire Line
+	8250 1950 8100 1950
+Wire Wire Line
+	7800 2150 7800 2300
+Wire Wire Line
+	7800 2300 8250 2300
+Text Label 8250 2300 2    50   ~ 0
+ESP_DTR
+Wire Wire Line
+	7800 1750 7800 1650
+Wire Wire Line
+	7800 1650 7000 1650
+$Comp
+L Device:R R32
+U 1 1 5E446E74
+P 7000 1400
+F 0 "R32" H 7070 1446 50  0000 L CNN
+F 1 "10k" H 7070 1355 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 6930 1400 50  0001 C CNN
+F 3 "~" H 7000 1400 50  0001 C CNN
+	1    7000 1400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7000 1550 7000 1650
+Wire Wire Line
+	7000 1250 7000 1100
+Wire Wire Line
+	7000 1100 6750 1100
+Text Label 6750 1100 0    50   ~ 0
+VCC_ESP
+Wire Wire Line
+	7000 1650 6750 1650
+Connection ~ 7000 1650
+Wire Wire Line
+	5800 3200 6250 3200
+Text Label 6250 3200 2    50   ~ 0
+GPIO0
+Text Label 6750 1650 0    50   ~ 0
+GPIO0
+Wire Wire Line
+	5800 4100 6250 4100
+$Comp
+L Device:R R31
+U 1 1 5E44ADDC
+P 6400 4100
+F 0 "R31" V 6193 4100 50  0000 C CNN
+F 1 "10k" V 6284 4100 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 6330 4100 50  0001 C CNN
+F 3 "~" H 6400 4100 50  0001 C CNN
+	1    6400 4100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6550 4100 6800 4100
+Wire Wire Line
+	6800 4100 6800 4250
+$Comp
+L power:GND #PWR0139
+U 1 1 5E44BE67
+P 6800 4250
+F 0 "#PWR0139" H 6800 4000 50  0001 C CNN
+F 1 "GND" H 6805 4077 50  0000 C CNN
+F 2 "" H 6800 4250 50  0001 C CNN
+F 3 "" H 6800 4250 50  0001 C CNN
+	1    6800 4250
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
