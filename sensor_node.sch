@@ -65,8 +65,10 @@ F6 "NPGOOD" I R 2900 2500 50
 F7 "NCHG" I R 2900 2600 50 
 F8 "VCC" I L 1150 1450 50 
 F9 "VCC_1V8" I L 1150 1750 50 
-F10 "VCC_3V3" I L 1150 1850 50 
+F10 "VCC_3V3" I L 1150 2150 50 
 F11 "USB" I R 2900 1200 50 
+F12 "EN_3V3" I L 1150 2050 50 
+F13 "NCTRL_LEDS" I R 2900 2400 50 
 $EndSheet
 Wire Bus Line
 	2900 1200 3300 1200
@@ -133,8 +135,8 @@ Wire Wire Line
 Text Label 8500 1350 0    50   ~ 0
 VCC_1V8
 Wire Wire Line
-	1150 1850 700  1850
-Text Label 700  1850 0    50   ~ 0
+	1150 2150 700  2150
+Text Label 700  2150 0    50   ~ 0
 VCC_3V3
 Wire Wire Line
 	9250 4050 8500 4050
@@ -223,10 +225,74 @@ Text Label 5550 1950 0    50   ~ 0
 STM32_PBx
 Text Label 5550 2050 0    50   ~ 0
 STM32_PCx
+Wire Wire Line
+	10000 1450 10400 1450
+Entry Wire Line
+	10400 1450 10500 1550
 Wire Bus Line
-	7850 1900 7850 2600
+	10500 1550 10500 1450
+Text Label 10350 1450 2    50   ~ 0
+PB1
+Wire Wire Line
+	2900 2000 3200 2000
+Entry Wire Line
+	3200 2000 3300 2100
+Wire Bus Line
+	3300 2100 3300 2250
+Wire Bus Line
+	3300 2250 3750 2250
+Text Label 3750 2250 2    50   ~ 0
+STM32_PBx
+Text Label 3150 2000 2    50   ~ 0
+PB0
+Wire Wire Line
+	2900 2500 3200 2500
+Wire Wire Line
+	2900 2500 2900 2600
+Wire Wire Line
+	2900 2600 3200 2600
+Wire Wire Line
+	2900 2700 3200 2700
+Text Label 3200 2500 2    50   ~ 0
+PC12
+Text Label 3200 2600 2    50   ~ 0
+PC11
+Text Label 3200 2700 2    50   ~ 0
+PC10
+Entry Wire Line
+	3200 2500 3300 2600
+Entry Wire Line
+	3200 2600 3300 2700
+Entry Wire Line
+	3200 2700 3300 2800
+Wire Bus Line
+	3300 2900 3750 2900
+Text Label 3750 2900 2    50   ~ 0
+STM32_PCx
+Wire Wire Line
+	2550 4300 2900 4300
+Entry Wire Line
+	2900 4300 3000 4400
+Wire Bus Line
+	3000 4400 3000 4500
+Wire Bus Line
+	3000 4500 3500 4500
+Text Label 3500 4500 2    50   ~ 0
+STM32_PCx
+Text Label 2750 4300 0    50   ~ 0
+PC9
+Wire Wire Line
+	2900 2400 3200 2400
+Entry Wire Line
+	3200 2400 3300 2500
+Wire Bus Line
+	8750 4350 8750 4650
 Wire Bus Line
 	2900 4600 2900 4850
 Wire Bus Line
-	8750 4350 8750 4650
+	7850 1900 7850 2600
+Wire Bus Line
+	3300 2500 3300 2900
+Text Label 3200 2400 2    50   ~ 0
+PC8
 $EndSCHEMATC

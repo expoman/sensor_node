@@ -505,37 +505,37 @@ SWDIO
 $Comp
 L Connector:Conn_01x06_Male J1
 U 1 1 5E276A4B
-P 7700 1150
-F 0 "J1" H 7808 1531 50  0000 C CNN
-F 1 "Conn_01x06_Male" H 7808 1440 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 7700 1150 50  0001 C CNN
-F 3 "~" H 7700 1150 50  0001 C CNN
-	1    7700 1150
+P 8850 1200
+F 0 "J1" H 8958 1581 50  0000 C CNN
+F 1 "Conn_01x06_Male" H 8958 1490 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 8850 1200 50  0001 C CNN
+F 3 "~" H 8850 1200 50  0001 C CNN
+	1    8850 1200
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7900 950  8550 950 
+	9050 1000 9700 1000
 Wire Wire Line
-	7900 1050 8550 1050
+	9050 1100 9700 1100
 Wire Wire Line
-	7900 1150 8550 1150
+	9050 1200 9700 1200
 Wire Wire Line
-	7900 1250 8550 1250
+	9050 1300 9700 1300
 Wire Wire Line
-	7900 1350 8550 1350
+	9050 1400 9700 1400
 Wire Wire Line
-	7900 1450 8550 1450
-Text Label 8400 950  0    50   ~ 0
+	9050 1500 9700 1500
+Text Label 9550 1000 0    50   ~ 0
 VCC
-Text Label 8300 1050 0    50   ~ 0
+Text Label 9450 1100 0    50   ~ 0
 SWCLK
-Text Label 8400 1150 0    50   ~ 0
+Text Label 9550 1200 0    50   ~ 0
 GND
-Text Label 8300 1250 0    50   ~ 0
+Text Label 9450 1300 0    50   ~ 0
 SWDIO
-Text Label 8300 1350 0    50   ~ 0
+Text Label 9450 1400 0    50   ~ 0
 NRST
-Text Label 8300 1450 0    50   ~ 0
+Text Label 9450 1500 0    50   ~ 0
 SWO
 $Comp
 L Device:R R2
@@ -796,18 +796,6 @@ Wire Wire Line
 	6300 3700 7050 3700
 Entry Wire Line
 	7050 2200 7150 2300
-Entry Wire Line
-	7050 2600 7150 2700
-Entry Wire Line
-	7050 2700 7150 2800
-Entry Wire Line
-	7050 2800 7150 2900
-Entry Wire Line
-	7050 2900 7150 3000
-Entry Wire Line
-	7050 3000 7150 3100
-Entry Wire Line
-	7050 3100 7150 3200
 Wire Wire Line
 	6700 2400 6700 1950
 Wire Wire Line
@@ -832,8 +820,6 @@ Wire Wire Line
 	6300 3400 7050 3400
 Wire Wire Line
 	6300 3300 7050 3300
-Entry Wire Line
-	7050 3200 7150 3300
 Wire Bus Line
 	7150 3650 7850 3650
 Wire Bus Line
@@ -852,18 +838,18 @@ Text Label 7050 2300 2    50   ~ 0
 PA1
 Text Label 7050 2600 2    50   ~ 0
 SPI1_NSS
-Text Label 6900 2700 2    50   ~ 0
+Text Label 7050 2700 2    50   ~ 0
 SPI1_SCK
-Text Label 6900 2800 2    50   ~ 0
+Text Label 7050 2800 2    50   ~ 0
 SPI1_MISO
-Text Label 6900 2900 2    50   ~ 0
+Text Label 7050 2900 2    50   ~ 0
 SPI1_MOSI
-Text Label 6900 3000 0    50   ~ 0
-PA8
-Text Label 6900 3100 0    50   ~ 0
-PA9
-Text Label 6850 3200 0    50   ~ 0
-PA10
+Text Label 7050 3000 2    50   ~ 0
+DISP_DC
+Text Label 7050 3100 2    50   ~ 0
+DISP_RST
+Text Label 7050 3200 2    50   ~ 0
+DSIP_BUSY
 Text Label 6850 3700 0    50   ~ 0
 PA15
 Text Label 7050 2500 2    50   ~ 0
@@ -952,14 +938,6 @@ Entry Wire Line
 	6600 700  6700 800 
 Wire Bus Line
 	6700 800  7000 800 
-Wire Bus Line
-	7150 3400 7150 3650
-Wire Bus Line
-	7150 2300 7150 3350
-Wire Bus Line
-	6950 4000 6950 5600
-Wire Bus Line
-	4550 4000 4550 5600
 Text Label 7000 800  2    50   ~ 0
 USB
 Text Label 7800 3650 2    50   ~ 0
@@ -968,4 +946,67 @@ Text Label 6700 4500 2    50   ~ 0
 USART1_TX
 Text Label 6700 4600 2    50   ~ 0
 USART1_RX
+Wire Wire Line
+	9200 3750 9800 3750
+Text HLabel 9800 3750 2    50   Input ~ 0
+VCC_3V3
+Text Label 9200 3750 0    50   ~ 0
+VCC_3V3
+$Comp
+L Connector:Conn_01x08_Male J?
+U 1 1 5E442623
+P 8850 2350
+AR Path="/5E442623" Ref="J?"  Part="1" 
+AR Path="/5E2157B8/5E442623" Ref="J?"  Part="1" 
+F 0 "J?" H 8958 2831 50  0000 C CNN
+F 1 "Conn_01x08_Male" H 8958 2740 50  0000 C CNN
+F 2 "Connector_JST:JST_PH_S8B-PH-SM4-TB_1x08-1MP_P2.00mm_Horizontal" H 8850 2350 50  0001 C CNN
+F 3 "~" H 8850 2350 50  0001 C CNN
+	1    8850 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9050 2050 9600 2050
+Wire Wire Line
+	9050 2150 9600 2150
+Wire Wire Line
+	9050 2250 9600 2250
+Wire Wire Line
+	9050 2350 9600 2350
+Wire Wire Line
+	9050 2450 9600 2450
+Wire Wire Line
+	9050 2550 9600 2550
+Wire Wire Line
+	9050 2650 9600 2650
+Wire Wire Line
+	9050 2750 9600 2750
+Text Label 9600 2050 2    50   ~ 0
+VCC_3V3
+Text Label 9600 2150 2    50   ~ 0
+GND
+Text Label 9600 2250 2    50   ~ 0
+SPI1_MOSI
+Text Label 9600 2350 2    50   ~ 0
+SPI1_SCK
+Text Label 9600 2450 2    50   ~ 0
+SPI1_NSS
+Text Label 9600 2550 2    50   ~ 0
+DISP_DC
+Text Label 9600 2650 2    50   ~ 0
+DISP_RST
+Text Label 9600 2750 2    50   ~ 0
+DISP_BUSY
+Text Notes 8850 1800 0    50   ~ 0
+Display Connector (SPI)
+Wire Bus Line
+	7150 3400 7150 3650
+Wire Bus Line
+	7150 2300 7150 3350
+Wire Bus Line
+	6950 4000 6950 5600
+Wire Bus Line
+	4550 4000 4550 5600
+Text Notes 8850 750  0    50   ~ 0
+Programming connector
 $EndSCHEMATC
