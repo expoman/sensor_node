@@ -27,20 +27,16 @@ $EndComp
 $Comp
 L Connector:Conn_01x02_Female J4
 U 1 1 5E244052
-P 9100 1400
-F 0 "J4" H 8992 1075 50  0000 C CNN
-F 1 "Conn_01x02_Female" H 8992 1166 50  0000 C CNN
-F 2 "Connector_JST:JST_EH_S2B-EH_1x02_P2.50mm_Horizontal" H 9100 1400 50  0001 C CNN
-F 3 "~" H 9100 1400 50  0001 C CNN
-	1    9100 1400
-	-1   0    0    1   
+P 9300 1300
+F 0 "J4" H 9192 975 50  0000 C CNN
+F 1 "Conn_01x02_Female" H 9192 1066 50  0000 C CNN
+F 2 "Connector_JST:JST_EH_S2B-EH_1x02_P2.50mm_Horizontal" H 9300 1300 50  0001 C CNN
+F 3 "~" H 9300 1300 50  0001 C CNN
+	1    9300 1300
+	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9100 1400 8650 1400
-Wire Wire Line
 	9100 1300 8650 1300
-Text Label 8650 1300 0    50   ~ 0
-VBAT_P
 $Comp
 L power:GND #PWR0101
 U 1 1 5E24405B
@@ -52,8 +48,6 @@ F 3 "" H 8650 1550 50  0001 C CNN
 	1    8650 1550
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	8650 1550 8650 1400
 Wire Wire Line
 	7200 2400 7650 2400
 Wire Wire Line
@@ -1154,6 +1148,12 @@ Text Label 9550 4500 0    50   ~ 0
 NCTRL_LEDS
 Text HLabel 10000 4500 2    50   Input ~ 0
 NCTRL_LEDS
+Text Label 8650 1300 0    50   ~ 0
+VBAT_P
+Wire Wire Line
+	8650 1550 8650 1400
 Wire Bus Line
 	3850 1650 3850 2050
+Wire Wire Line
+	8650 1400 9100 1400
 $EndSCHEMATC

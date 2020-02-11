@@ -285,6 +285,8 @@ Text Label 3200 2400 2    50   ~ 0
 PC8
 Wire Bus Line
 	7850 2100 8300 2100
+Text Label 8300 2100 2    50   ~ 0
+I2C2
 Wire Bus Line
 	8750 4350 8750 4650
 Wire Bus Line
@@ -293,6 +295,4 @@ Wire Bus Line
 	7850 1900 7850 2100
 Wire Bus Line
 	3300 2500 3300 2900
-Text Label 8300 2100 2    50   ~ 0
-I2C2
 $EndSCHEMATC
