@@ -82,14 +82,10 @@ Entry Wire Line
 	7750 1800 7850 1900
 Entry Wire Line
 	7750 1900 7850 2000
-Wire Bus Line
-	7850 2600 6950 2600
 Text Label 7300 1800 2    50   ~ 0
 SDA
 Text Label 7300 1900 2    50   ~ 0
 SCL
-Text Label 7000 2600 0    50   ~ 0
-I2C2
 Wire Wire Line
 	2550 4500 2800 4500
 Wire Wire Line
@@ -285,14 +281,18 @@ Wire Wire Line
 	2900 2400 3200 2400
 Entry Wire Line
 	3200 2400 3300 2500
+Text Label 3200 2400 2    50   ~ 0
+PC8
+Wire Bus Line
+	7850 2100 8300 2100
 Wire Bus Line
 	8750 4350 8750 4650
 Wire Bus Line
 	2900 4600 2900 4850
 Wire Bus Line
-	7850 1900 7850 2600
+	7850 1900 7850 2100
 Wire Bus Line
 	3300 2500 3300 2900
-Text Label 3200 2400 2    50   ~ 0
-PC8
+Text Label 8300 2100 2    50   ~ 0
+I2C2
 $EndSCHEMATC

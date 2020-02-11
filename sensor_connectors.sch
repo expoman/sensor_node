@@ -78,7 +78,7 @@ U 1 1 5E44E1EB
 P 1150 2350
 F 0 "J6" H 1258 2631 50  0000 C CNN
 F 1 "Conn_01x04_Male" H 1258 2540 50  0000 C CNN
-F 2 "" H 1150 2350 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Horizontal" H 1150 2350 50  0001 C CNN
 F 3 "~" H 1150 2350 50  0001 C CNN
 	1    1150 2350
 	1    0    0    -1  

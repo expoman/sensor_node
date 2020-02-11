@@ -957,8 +957,8 @@ L Connector:Conn_01x08_Male J?
 U 1 1 5E442623
 P 8850 2350
 AR Path="/5E442623" Ref="J?"  Part="1" 
-AR Path="/5E2157B8/5E442623" Ref="J?"  Part="1" 
-F 0 "J?" H 8958 2831 50  0000 C CNN
+AR Path="/5E2157B8/5E442623" Ref="J7"  Part="1" 
+F 0 "J7" H 8958 2831 50  0000 C CNN
 F 1 "Conn_01x08_Male" H 8958 2740 50  0000 C CNN
 F 2 "Connector_JST:JST_PH_S8B-PH-SM4-TB_1x08-1MP_P2.00mm_Horizontal" H 8850 2350 50  0001 C CNN
 F 3 "~" H 8850 2350 50  0001 C CNN
@@ -999,6 +999,8 @@ Text Label 9600 2750 2    50   ~ 0
 DISP_BUSY
 Text Notes 8850 1800 0    50   ~ 0
 Display Connector (SPI)
+Text Notes 8850 750  0    50   ~ 0
+Programming connector
 Wire Bus Line
 	7150 3400 7150 3650
 Wire Bus Line
@@ -1007,6 +1009,4 @@ Wire Bus Line
 	6950 4000 6950 5600
 Wire Bus Line
 	4550 4000 4550 5600
-Text Notes 8850 750  0    50   ~ 0
-Programming connector
 $EndSCHEMATC
