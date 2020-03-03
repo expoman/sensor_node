@@ -1001,6 +1001,43 @@ Text Notes 8850 1800 0    50   ~ 0
 Display Connector (SPI)
 Text Notes 8850 750  0    50   ~ 0
 Programming connector
+$Comp
+L Connector:Conn_01x06_Male J9
+U 1 1 5E60DE19
+P 7600 1200
+F 0 "J9" H 7708 1581 50  0000 C CNN
+F 1 "Conn_01x06_Male" H 7708 1490 50  0000 C CNN
+F 2 "Connector_Molex:molex_pico-ezmate_781715006_1x06_P1.20mm_Horizontal" H 7600 1200 50  0001 C CNN
+F 3 "~" H 7600 1200 50  0001 C CNN
+	1    7600 1200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7800 1000 8450 1000
+Wire Wire Line
+	7800 1100 8450 1100
+Wire Wire Line
+	7800 1200 8450 1200
+Wire Wire Line
+	7800 1300 8450 1300
+Wire Wire Line
+	7800 1400 8450 1400
+Wire Wire Line
+	7800 1500 8450 1500
+Text Label 8300 1000 0    50   ~ 0
+VCC
+Text Label 8200 1100 0    50   ~ 0
+SWCLK
+Text Label 8300 1200 0    50   ~ 0
+GND
+Text Label 8200 1300 0    50   ~ 0
+SWDIO
+Text Label 8200 1400 0    50   ~ 0
+NRST
+Text Label 8200 1500 0    50   ~ 0
+SWO
+Text Notes 7600 750  0    50   ~ 0
+Programming connector
 Wire Bus Line
 	7150 3400 7150 3650
 Wire Bus Line

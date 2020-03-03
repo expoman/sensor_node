@@ -1152,8 +1152,8 @@ Text Label 8650 1300 0    50   ~ 0
 VBAT_P
 Wire Wire Line
 	8650 1550 8650 1400
-Wire Bus Line
-	3850 1650 3850 2050
 Wire Wire Line
 	8650 1400 9100 1400
+Wire Bus Line
+	3850 1650 3850 2050
 $EndSCHEMATC

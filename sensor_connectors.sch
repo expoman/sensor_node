@@ -19,7 +19,7 @@ U 1 1 5E27DEA0
 P 1150 1350
 F 0 "J2" H 1068 1025 50  0000 C CNN
 F 1 "Conn_01x03" H 1068 1116 50  0000 C CNN
-F 2 "Connector_JST:JST_EH_S3B-EH_1x03_P2.50mm_Horizontal" H 1150 1350 50  0001 C CNN
+F 2 "Connector_Molex:Molex_Pico-EZmate_78171-0002_1x02-1MP_P1.20mm_Vertical" H 1150 1350 50  0001 C CNN
 F 3 "~" H 1150 1350 50  0001 C CNN
 	1    1150 1350
 	-1   0    0    1   
@@ -78,7 +78,7 @@ U 1 1 5E44E1EB
 P 1150 2350
 F 0 "J6" H 1258 2631 50  0000 C CNN
 F 1 "Conn_01x04_Male" H 1258 2540 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Horizontal" H 1150 2350 50  0001 C CNN
+F 2 "Connector_Molex:Molex_Pico-EZmate_78171-0003_1x03-1MP_P1.20mm_Vertical" H 1150 2350 50  0001 C CNN
 F 3 "~" H 1150 2350 50  0001 C CNN
 	1    1150 2350
 	1    0    0    -1  
@@ -103,4 +103,97 @@ Text HLabel 2150 2350 2    50   Input ~ 0
 I2C_SDA
 Text HLabel 2150 2550 2    50   Input ~ 0
 I2C_SCL
+$Comp
+L Device:C C28
+U 1 1 5E6097E4
+P 1200 3150
+F 0 "C28" H 1315 3196 50  0000 L CNN
+F 1 "10uF" H 1315 3105 50  0000 L CNN
+F 2 "Capacitor_SMD:CP_Elec_6.3x3" H 1238 3000 50  0001 C CNN
+F 3 "~" H 1200 3150 50  0001 C CNN
+	1    1200 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1200 3000 1200 2800
+Wire Wire Line
+	1200 3300 1200 3550
+$Comp
+L power:GND #PWR0140
+U 1 1 5E60A930
+P 1200 3550
+F 0 "#PWR0140" H 1200 3300 50  0001 C CNN
+F 1 "GND" H 1205 3377 50  0000 C CNN
+F 2 "" H 1200 3550 50  0001 C CNN
+F 3 "" H 1200 3550 50  0001 C CNN
+	1    1200 3550
+	1    0    0    -1  
+$EndComp
+Text Label 1200 2800 0    50   ~ 0
+VCC_3V3
+$Comp
+L Device:C C29
+U 1 1 5E60C358
+P 1750 3150
+F 0 "C29" H 1865 3196 50  0000 L CNN
+F 1 "100nF" H 1865 3105 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 1788 3000 50  0001 C CNN
+F 3 "~" H 1750 3150 50  0001 C CNN
+	1    1750 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1750 3000 1750 2800
+Wire Wire Line
+	1750 3300 1750 3550
+$Comp
+L power:GND #PWR0141
+U 1 1 5E60C360
+P 1750 3550
+F 0 "#PWR0141" H 1750 3300 50  0001 C CNN
+F 1 "GND" H 1755 3377 50  0000 C CNN
+F 2 "" H 1750 3550 50  0001 C CNN
+F 3 "" H 1750 3550 50  0001 C CNN
+	1    1750 3550
+	1    0    0    -1  
+$EndComp
+Text Label 1750 2800 0    50   ~ 0
+VCC_3V3
+$Comp
+L Connector_Generic:Conn_01x06 J10
+U 1 1 5E618D0A
+P 1150 4950
+F 0 "J10" H 1068 5367 50  0000 C CNN
+F 1 "Conn_01x06" H 1068 5276 50  0000 C CNN
+F 2 "Connector_Molex:molex_pico-ezmate_781715006_1x06_P1.20mm_Horizontal" H 1150 4950 50  0001 C CNN
+F 3 "~" H 1150 4950 50  0001 C CNN
+	1    1150 4950
+	-1   0    0    -1  
+$EndComp
+Text Notes 950  4450 0    50   ~ 0
+Genearl Purpose connector\nwith supply and gpio pins
+Wire Wire Line
+	1350 4750 2100 4750
+Wire Wire Line
+	1350 4850 2100 4850
+Wire Wire Line
+	1350 4950 2100 4950
+Wire Wire Line
+	1350 5050 2100 5050
+Wire Wire Line
+	1350 5150 2100 5150
+Wire Wire Line
+	1350 5250 2100 5250
+Text Label 2100 5250 2    50   ~ 0
+GND
+Text Label 2100 4750 2    50   ~ 0
+VCC_3V3
+Text HLabel 2100 4850 2    50   Input ~ 0
+EXT_GPIO0
+Text HLabel 2100 4950 2    50   Input ~ 0
+EXT_GPIO1
+Text HLabel 2100 5050 2    50   Input ~ 0
+EXT_GPIO2
+Text HLabel 2100 5150 2    50   Input ~ 0
+EXT_GPIO3
 $EndSCHEMATC
