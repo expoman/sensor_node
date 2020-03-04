@@ -14,40 +14,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L RF_Module:ESP-12F U2
-U 1 1 5E27600D
-P 4750 1950
-F 0 "U2" H 4750 2931 50  0000 C CNN
-F 1 "ESP-12F" H 4750 2840 50  0000 C CNN
-F 2 "RF_Module:ESP-12E" H 4750 1950 50  0001 C CNN
-F 3 "http://wiki.ai-thinker.com/_media/esp8266/esp8266_series_modules_user_manual_v1.1.pdf" H 4400 2050 50  0001 C CNN
-	1    4750 1950
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4750 2650 4750 2950
-$Comp
-L power:GND #PWR0118
-U 1 1 5E276D81
-P 4750 2950
-F 0 "#PWR0118" H 4750 2700 50  0001 C CNN
-F 1 "GND" H 4755 2777 50  0000 C CNN
-F 2 "" H 4750 2950 50  0001 C CNN
-F 3 "" H 4750 2950 50  0001 C CNN
-	1    4750 2950
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5350 1450 5800 1450
-Wire Wire Line
-	5350 1650 5800 1650
-Wire Wire Line
-	4750 1150 4750 750 
-Wire Wire Line
-	4750 750  5150 750 
-Text Label 4850 750  0    50   ~ 0
-VCC_ESP
-$Comp
 L Device:C C11
 U 1 1 5E27749C
 P 1300 1200
@@ -92,10 +58,6 @@ F 3 "" H 1050 1350 50  0001 C CNN
 $EndComp
 Text Label 1050 1050 0    50   ~ 0
 VCC_ESP
-Wire Wire Line
-	4150 1350 3750 1350
-Text Label 3750 1350 0    50   ~ 0
-NRST
 $Comp
 L Device:R R10
 U 1 1 5E279741
@@ -149,58 +111,8 @@ Wire Wire Line
 	1450 2800 1450 2950
 Text Label 1800 2800 0    50   ~ 0
 NRST
-$Comp
-L Device:R R12
-U 1 1 5E2FE316
-P 3350 1550
-F 0 "R12" V 3143 1550 50  0000 C CNN
-F 1 "10k" V 3234 1550 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 3280 1550 50  0001 C CNN
-F 3 "~" H 3350 1550 50  0001 C CNN
-	1    3350 1550
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	3500 1550 4150 1550
-Wire Wire Line
-	3200 1550 3150 1550
-$Comp
-L Device:R R11
-U 1 1 5E303072
-P 3150 2000
-F 0 "R11" H 3080 1954 50  0000 R CNN
-F 1 "10k" H 3080 2045 50  0000 R CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 3080 2000 50  0001 C CNN
-F 3 "~" H 3150 2000 50  0001 C CNN
-	1    3150 2000
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	3150 1850 3150 1550
-Connection ~ 3150 1550
-Wire Wire Line
-	3150 1550 2950 1550
-Wire Wire Line
-	3150 2150 3150 2400
-$Comp
-L power:GND #PWR0117
-U 1 1 5E303C75
-P 3150 2400
-F 0 "#PWR0117" H 3150 2150 50  0001 C CNN
-F 1 "GND" H 3155 2227 50  0000 C CNN
-F 2 "" H 3150 2400 50  0001 C CNN
-F 3 "" H 3150 2400 50  0001 C CNN
-	1    3150 2400
-	1    0    0    -1  
-$EndComp
 Text HLabel 1100 2650 0    50   Input ~ 0
 ESP_NRST
-Text HLabel 2950 1550 0    50   Input ~ 0
-ESP_EN
-Text HLabel 5800 1450 2    50   Input ~ 0
-ESP_TX
-Text HLabel 5800 1650 2    50   Input ~ 0
-ESP_RX
 Text HLabel 1050 1050 0    50   Input ~ 0
 VCC
 $Comp
@@ -344,40 +256,8 @@ VCC_ESP
 Wire Wire Line
 	7000 1650 6750 1650
 Connection ~ 7000 1650
-Wire Wire Line
-	5350 1350 5800 1350
-Text Label 5800 1350 2    50   ~ 0
-GPIO0
 Text Label 6750 1650 0    50   ~ 0
 GPIO0
-Wire Wire Line
-	5350 2250 5800 2250
-$Comp
-L Device:R R31
-U 1 1 5E44ADDC
-P 5950 2250
-F 0 "R31" V 5743 2250 50  0000 C CNN
-F 1 "10k" V 5834 2250 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 5880 2250 50  0001 C CNN
-F 3 "~" H 5950 2250 50  0001 C CNN
-	1    5950 2250
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	6100 2250 6350 2250
-Wire Wire Line
-	6350 2250 6350 2400
-$Comp
-L power:GND #PWR0139
-U 1 1 5E44BE67
-P 6350 2400
-F 0 "#PWR0139" H 6350 2150 50  0001 C CNN
-F 1 "GND" H 6355 2227 50  0000 C CNN
-F 2 "" H 6350 2400 50  0001 C CNN
-F 3 "" H 6350 2400 50  0001 C CNN
-	1    6350 2400
-	1    0    0    -1  
-$EndComp
 $Comp
 L Connector_Generic:Conn_02x04_Odd_Even J8
 U 1 1 5E5E4467
@@ -415,8 +295,6 @@ Text Label 3700 4850 2    50   ~ 0
 NRST
 Text Label 1450 4950 0    50   ~ 0
 ESP_LED
-Text Label 3650 1550 0    50   ~ 0
-EN_ESP
 Text Label 3700 4950 2    50   ~ 0
 EN_ESP
 Text Label 1450 5050 0    50   ~ 0

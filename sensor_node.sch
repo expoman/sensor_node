@@ -31,7 +31,7 @@ F11 "STM_PBx" I L 6000 1950 50
 F12 "STM_PAx" I L 6000 1850 50 
 $EndSheet
 $Sheet
-S 9250 3800 1050 850 
+S 9250 3800 950  1650
 U 5E27DC26
 F0 "sensor_connectors" 50
 F1 "sensor_connectors.sch" 50
@@ -39,6 +39,10 @@ F2 "1WIRE0_EXT_DATA" I L 9250 4150 50
 F3 "VCC_3V3" I L 9250 4050 50 
 F4 "I2C_SDA" I L 9250 4250 50 
 F5 "I2C_SCL" I L 9250 4350 50 
+F6 "EXT_GPIO0" I L 9250 4700 50 
+F7 "EXT_GPIO1" I L 9250 4800 50 
+F8 "EXT_GPIO2" I L 9250 4900 50 
+F9 "EXT_GPIO3" I L 9250 5000 50 
 $EndSheet
 $Sheet
 S 1250 3650 1300 1200
@@ -186,8 +190,8 @@ Entry Wire Line
 Entry Wire Line
 	8850 4250 8750 4350
 Wire Bus Line
-	8750 4650 8400 4650
-Text Label 8400 4650 0    50   ~ 0
+	8750 4500 8400 4500
+Text Label 8400 4500 0    50   ~ 0
 I2C1
 Text Label 8900 4250 0    50   ~ 0
 SDA
@@ -299,8 +303,20 @@ Wire Bus Line
 	7850 1800 8300 1800
 Text Label 8300 1800 2    50   ~ 0
 I2C1
+Text Label 7150 1500 0    50   ~ 0
+SDA
+Text Label 7150 1600 0    50   ~ 0
+SCL
+Wire Wire Line
+	9250 4700 8600 4700
+Wire Wire Line
+	9250 4800 8600 4800
+Wire Wire Line
+	9250 4900 8600 4900
+Wire Wire Line
+	9250 5000 8600 5000
 Wire Bus Line
-	8750 4350 8750 4650
+	8750 4350 8750 4500
 Wire Bus Line
 	2900 4600 2900 4850
 Wire Bus Line
@@ -309,8 +325,12 @@ Wire Bus Line
 	7850 1600 7850 1800
 Wire Bus Line
 	3300 2500 3300 2900
-Text Label 7150 1500 0    50   ~ 0
-SDA
-Text Label 7150 1600 0    50   ~ 0
-SCL
+Text Label 8600 4700 0    50   ~ 0
+EXT_GPIO0
+Text Label 8600 4800 0    50   ~ 0
+EXT_GPIO1
+Text Label 8600 4900 0    50   ~ 0
+EXT_GPIO2
+Text Label 8600 5000 0    50   ~ 0
+EXT_GPIO3
 $EndSCHEMATC
