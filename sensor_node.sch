@@ -315,6 +315,14 @@ Wire Wire Line
 	9250 4900 8600 4900
 Wire Wire Line
 	9250 5000 8600 5000
+Text Label 8600 4700 0    50   ~ 0
+EXT_GPIO0
+Text Label 8600 4800 0    50   ~ 0
+EXT_GPIO1
+Text Label 8600 4900 0    50   ~ 0
+EXT_GPIO2
+Text Label 8600 5000 0    50   ~ 0
+EXT_GPIO3
 Wire Bus Line
 	8750 4350 8750 4500
 Wire Bus Line
@@ -325,12 +333,4 @@ Wire Bus Line
 	7850 1600 7850 1800
 Wire Bus Line
 	3300 2500 3300 2900
-Text Label 8600 4700 0    50   ~ 0
-EXT_GPIO0
-Text Label 8600 4800 0    50   ~ 0
-EXT_GPIO1
-Text Label 8600 4900 0    50   ~ 0
-EXT_GPIO2
-Text Label 8600 5000 0    50   ~ 0
-EXT_GPIO3
 $EndSCHEMATC
