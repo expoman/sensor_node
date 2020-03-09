@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 6
+Sheet 6 6
 Title ""
 Date ""
 Rev ""
@@ -576,9 +576,9 @@ Wire Bus Line
 Text HLabel 6050 6750 2    50   Input ~ 0
 STM32_PCx
 Text Label 5350 5050 2    50   ~ 0
-PC0
+I2C3_SCL
 Text Label 5350 5150 2    50   ~ 0
-PC1
+I2C3_SDA
 Text Label 5350 5250 2    50   ~ 0
 PC2
 Text Label 5350 5350 2    50   ~ 0
@@ -631,14 +631,14 @@ Wire Wire Line
 	5050 4750 5600 4750
 Wire Wire Line
 	5050 4850 5600 4850
-Text Label 5400 4850 0    50   ~ 0
-PB15
-Text Label 5400 4750 0    50   ~ 0
-PB14
-Text Label 5400 4650 0    50   ~ 0
-PB13
-Text Label 5400 4550 0    50   ~ 0
-PB12
+Text Label 5100 4850 0    50   ~ 0
+SPI2_MOSI
+Text Label 5100 4750 0    50   ~ 0
+SPI2_MISO
+Text Label 5100 4650 0    50   ~ 0
+SPI2_SCK
+Text Label 5100 4550 0    50   ~ 0
+SPI2_NSS
 Text Label 5450 3850 0    50   ~ 0
 PB5
 Text Label 5450 3750 0    50   ~ 0
@@ -848,14 +848,10 @@ Text HLabel 6500 2800 2    50   Input ~ 0
 STM_PAx
 Text Label 5450 3350 0    50   ~ 0
 PB0
-Text Label 5800 1850 2    50   ~ 0
-PA2
-Text Label 5800 1950 2    50   ~ 0
-PA3
 Text Label 5600 3150 0    50   ~ 0
 JTDI
 Text Label 5800 2650 2    50   ~ 0
-DSIP_BUSY
+DISP_BUSY
 Text Label 5800 2550 2    50   ~ 0
 DISP_RST
 Text Label 5800 2450 2    50   ~ 0
@@ -885,17 +881,7 @@ Wire Wire Line
 Wire Wire Line
 	5050 3050 5500 3050
 Entry Wire Line
-	5800 1950 5900 2050
-Entry Wire Line
-	5800 1850 5900 1950
-Entry Wire Line
 	5800 1750 5900 1850
-Connection ~ 5650 1950
-Wire Wire Line
-	5650 1950 5800 1950
-Wire Wire Line
-	5450 1850 5800 1850
-Connection ~ 5450 1850
 Wire Wire Line
 	5650 1950 5650 1550
 Wire Wire Line
@@ -923,9 +909,9 @@ Wire Wire Line
 Wire Wire Line
 	5050 1650 5800 1650
 Text HLabel 5650 1550 2    50   Input ~ 0
-ESP_TX
+USART2_RX
 Text HLabel 5450 1400 2    50   Input ~ 0
-EXP_RX
+USART2_TX
 Text HLabel 6600 3100 2    50   Input ~ 0
 USB
 Entry Wire Line
@@ -936,7 +922,7 @@ Text Label 5500 2850 2    50   ~ 0
 USB_DP
 Text Label 5500 2750 2    50   ~ 0
 USB_DN
-Text Notes 5150 1950 0    50   ~ 0
+Text Notes 5000 1950 0    50   ~ 0
 PA2: USART2_TX\nPA3: USART2_RX
 Wire Wire Line
 	5050 1950 5650 1950
@@ -1428,6 +1414,10 @@ Wire Wire Line
 Connection ~ 10350 2000
 Wire Wire Line
 	10350 2000 10350 2150
+Wire Wire Line
+	3250 5050 2750 5050
+Wire Wire Line
+	3250 5150 2750 5150
 Wire Bus Line
 	5900 2850 5900 3100
 Wire Bus Line
@@ -1436,4 +1426,8 @@ Wire Bus Line
 	5700 3450 5700 5050
 Wire Bus Line
 	5500 5150 5500 6750
+Text Label 2750 5050 0    50   ~ 0
+CAN0_RX
+Text Label 2750 5150 0    50   ~ 0
+CAN1_TX
 $EndSCHEMATC
