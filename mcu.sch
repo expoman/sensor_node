@@ -258,21 +258,21 @@ VDDA
 $Comp
 L Device:Ferrite_Bead FB1
 U 1 1 5E247466
-P 1850 6100
-F 0 "FB1" V 1576 6100 50  0000 C CNN
-F 1 "Ferrite_Bead" V 1667 6100 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 1780 6100 50  0001 C CNN
-F 3 "~" H 1850 6100 50  0001 C CNN
-	1    1850 6100
+P 1100 5750
+F 0 "FB1" V 826 5750 50  0000 C CNN
+F 1 "Ferrite_Bead" V 917 5750 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 1030 5750 50  0001 C CNN
+F 3 "~" H 1100 5750 50  0001 C CNN
+	1    1100 5750
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	1400 6100 1700 6100
+	650  5750 950  5750
 Wire Wire Line
-	2000 6100 2300 6100
-Text Label 1400 6100 0    50   ~ 0
+	1250 5750 1550 5750
+Text Label 650  5750 0    50   ~ 0
 VCC
-Text Label 2300 6100 2    50   ~ 0
+Text Label 1550 5750 2    50   ~ 0
 VDDA
 $Comp
 L Switch:SW_Push SW1
@@ -714,36 +714,6 @@ Text Label 8200 1500 0    50   ~ 0
 SWO
 Text Notes 7600 750  0    50   ~ 0
 Programming connector
-$Comp
-L Device:Battery_Cell BT1
-U 1 1 5E63139B
-P 700 5900
-F 0 "BT1" H 818 5996 50  0000 L CNN
-F 1 "Battery_Cell" H 818 5905 50  0000 L CNN
-F 2 "Battery:BatteryHolder_Keystone_1060_1x2032" V 700 5960 50  0001 C CNN
-F 3 "~" V 700 5960 50  0001 C CNN
-	1    700  5900
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	700  5700 700  5600
-Wire Wire Line
-	700  5600 1150 5600
-Wire Wire Line
-	700  6000 700  6050
-$Comp
-L power:GND #PWR0115
-U 1 1 5E643AF2
-P 700 6050
-F 0 "#PWR0115" H 700 5800 50  0001 C CNN
-F 1 "GND" H 705 5877 50  0000 C CNN
-F 2 "" H 700 6050 50  0001 C CNN
-F 3 "" H 700 6050 50  0001 C CNN
-	1    700  6050
-	1    0    0    -1  
-$EndComp
-Text Label 1150 5600 2    50   ~ 0
-VBAT
 $Comp
 L MCU_ST_STM32L5:STM32L552RE U1
 U 1 1 5E651902
@@ -2059,6 +2029,17 @@ Wire Wire Line
 	10850 3600 10850 3950
 Wire Wire Line
 	10750 3600 10850 3600
+Connection ~ 10850 3950
+Wire Wire Line
+	10850 3950 10900 3950
+Wire Wire Line
+	3850 1350 3850 1200
+Wire Wire Line
+	3850 1200 3550 1200
+Text HLabel 3550 1200 0    50   Input ~ 0
+VBAT
+Text Label 3600 1200 0    50   ~ 0
+VBAT
 Wire Bus Line
 	5900 2850 5900 3100
 Wire Bus Line
@@ -2067,7 +2048,8 @@ Wire Bus Line
 	5700 3450 5700 5050
 Wire Bus Line
 	5500 5150 5500 6750
-Connection ~ 10850 3950
-Wire Wire Line
-	10850 3950 10900 3950
+Text HLabel 2750 5950 0    50   Input ~ 0
+USART3_RX
+Text HLabel 2750 5850 0    50   Input ~ 0
+USART3_TX
 $EndSCHEMATC

@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 5 6
+Sheet 4 6
 Title ""
 Date ""
 Rev ""
@@ -1154,6 +1154,38 @@ Wire Wire Line
 	8650 1550 8650 1400
 Wire Wire Line
 	8650 1400 9100 1400
+$Comp
+L Device:Battery_Cell BT?
+U 1 1 5E709854
+P 1250 7000
+F 0 "BT?" H 1368 7096 50  0000 L CNN
+F 1 "Battery_Cell" H 1368 7005 50  0000 L CNN
+F 2 "Battery:BatteryHolder_Keystone_1060_1x2032" V 1250 7060 50  0001 C CNN
+F 3 "~" V 1250 7060 50  0001 C CNN
+	1    1250 7000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1250 6800 1250 6700
+Wire Wire Line
+	1250 6700 1700 6700
+Wire Wire Line
+	1250 7100 1250 7150
+$Comp
+L power:GND #PWR?
+U 1 1 5E70985D
+P 1250 7150
+F 0 "#PWR?" H 1250 6900 50  0001 C CNN
+F 1 "GND" H 1255 6977 50  0000 C CNN
+F 2 "" H 1250 7150 50  0001 C CNN
+F 3 "" H 1250 7150 50  0001 C CNN
+	1    1250 7150
+	1    0    0    -1  
+$EndComp
+Text Label 1700 6700 2    50   ~ 0
+VBAT
 Wire Bus Line
 	3850 1650 3850 2050
+Text HLabel 1700 6700 2    50   Input ~ 0
+VBAT
 $EndSCHEMATC

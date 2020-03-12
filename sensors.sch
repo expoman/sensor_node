@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 6
+Sheet 3 6
 Title ""
 Date ""
 Rev ""
@@ -350,4 +350,117 @@ Text Notes 8800 1900 0    50   ~ 0
 Supply Voltage 1.6-3.6V
 Text Notes 2050 2850 0    50   ~ 0
 Supply voltage 1.7 - 3.6V
+$Comp
+L RF_GPS:NEO-M8Q U?
+U 1 1 5E69FFAD
+P 3300 5250
+F 0 "U?" H 3300 4261 50  0000 C CNN
+F 1 "NEO-M8Q" H 3300 4170 50  0000 C CNN
+F 2 "RF_GPS:ublox_NEO" H 3700 4400 50  0001 C CNN
+F 3 "https://www.u-blox.com/sites/default/files/NEO-M8-FW3_DataSheet_%28UBX-15031086%29.pdf" H 3300 5250 50  0001 C CNN
+	1    3300 5250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3100 4350 3100 4200
+Wire Wire Line
+	3100 4200 2650 4200
+Text Label 2650 4200 0    50   ~ 0
+VCC_3V3
+Wire Wire Line
+	3300 6150 3300 6500
+$Comp
+L power:GND #PWR?
+U 1 1 5E6A3079
+P 3300 6500
+F 0 "#PWR?" H 3300 6250 50  0001 C CNN
+F 1 "GND" H 3305 6327 50  0000 C CNN
+F 2 "" H 3300 6500 50  0001 C CNN
+F 3 "" H 3300 6500 50  0001 C CNN
+	1    3300 6500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2600 5250 1850 5250
+Wire Wire Line
+	2600 5350 1850 5350
+Text Label 1850 5350 0    50   ~ 0
+I2C_SENSOR_SCL
+Text Label 1850 5250 0    50   ~ 0
+I2C_SENSOR_SDA
+Wire Wire Line
+	2600 4950 1850 4950
+Wire Wire Line
+	2600 5050 1850 5050
+Text Label 1850 4950 0    50   ~ 0
+GPS_TX
+Text Label 1850 5050 0    50   ~ 0
+GPS_RX
+$Comp
+L Connector:USB_B_Micro J?
+U 1 1 5E6A9FAC
+P 1300 4000
+F 0 "J?" H 1357 4467 50  0000 C CNN
+F 1 "USB_B_Micro" H 1357 4376 50  0000 C CNN
+F 2 "" H 1450 3950 50  0001 C CNN
+F 3 "~" H 1450 3950 50  0001 C CNN
+	1    1300 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1200 4400 1200 4650
+Wire Wire Line
+	1200 4650 1250 4650
+Wire Wire Line
+	1300 4650 1300 4400
+Wire Wire Line
+	1250 4650 1250 4700
+Connection ~ 1250 4650
+Wire Wire Line
+	1250 4650 1300 4650
+$Comp
+L power:GND #PWR?
+U 1 1 5E6AD755
+P 1250 4700
+F 0 "#PWR?" H 1250 4450 50  0001 C CNN
+F 1 "GND" H 1255 4527 50  0000 C CNN
+F 2 "" H 1250 4700 50  0001 C CNN
+F 3 "" H 1250 4700 50  0001 C CNN
+	1    1250 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 3800 3300 3800
+Wire Wire Line
+	3300 3800 3300 4350
+Wire Wire Line
+	1600 4000 2350 4000
+Wire Wire Line
+	2350 4000 2350 4750
+Wire Wire Line
+	2350 4750 2600 4750
+Wire Wire Line
+	2600 4650 2250 4650
+Wire Wire Line
+	2250 4650 2250 4100
+Wire Wire Line
+	2250 4100 1600 4100
+Wire Wire Line
+	3500 4350 3500 4200
+Wire Wire Line
+	3500 4200 4300 4200
+Text Label 4300 4200 2    50   ~ 0
+VCC_RF
+Wire Wire Line
+	3200 4350 3200 3950
+Wire Wire Line
+	3200 3950 2800 3950
+Text Label 2800 3950 0    50   ~ 0
+VBAT
+Text HLabel 2800 3950 0    50   Input ~ 0
+VBAT
+Text HLabel 1850 4950 0    50   Input ~ 0
+GPS_TX
+Text HLabel 1850 5050 0    50   Input ~ 0
+GPS_RX
 $EndSCHEMATC
