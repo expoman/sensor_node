@@ -359,6 +359,10 @@ Wire Wire Line
 	2550 4000 3250 4000
 Wire Wire Line
 	2550 4100 3250 4100
+Text Label 3250 4000 2    50   ~ 0
+STM_USART3_RX
+Text Label 3250 4100 2    50   ~ 0
+STM_USART3_TX
 Wire Bus Line
 	8750 4350 8750 4500
 Wire Bus Line
@@ -369,8 +373,4 @@ Wire Bus Line
 	7850 1600 7850 1800
 Wire Bus Line
 	3300 2500 3300 2900
-Text Label 3250 4000 2    50   ~ 0
-STM_USART3_RX
-Text Label 3250 4100 2    50   ~ 0
-STM_USART3_TX
 $EndSCHEMATC
