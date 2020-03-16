@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 6
+Sheet 2 6
 Title ""
 Date ""
 Rev ""
@@ -213,5 +213,42 @@ EXT_GPIO1
 Text HLabel 2100 5050 2    50   Input ~ 0
 EXT_GPIO2
 Text HLabel 2100 5150 2    50   Input ~ 0
+EXT_GPIO3
+$Comp
+L Connector_Generic:Conn_01x06 J14
+U 1 1 5EC15C92
+P 1150 5800
+AR Path="/5E27DC26/5EC15C92" Ref="J14"  Part="1" 
+AR Path="/5E5F64C8/5EC15C92" Ref="J?"  Part="1" 
+F 0 "J14" H 1068 6217 50  0000 C CNN
+F 1 "Conn_01x06" H 1068 6126 50  0000 C CNN
+F 2 "Connector_JST:JST_EH_S6B-EH_1x06_P2.50mm_Horizontal" H 1150 5800 50  0001 C CNN
+F 3 "~" H 1150 5800 50  0001 C CNN
+	1    1150 5800
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	1350 5600 2100 5600
+Wire Wire Line
+	1350 5700 2100 5700
+Wire Wire Line
+	1350 5800 2100 5800
+Wire Wire Line
+	1350 5900 2100 5900
+Wire Wire Line
+	1350 6000 2100 6000
+Wire Wire Line
+	1350 6100 2100 6100
+Text Label 2100 6100 2    50   ~ 0
+GND
+Text Label 2100 5600 2    50   ~ 0
+VCC_3V3
+Text HLabel 2100 5700 2    50   Input ~ 0
+EXT_GPIO0
+Text HLabel 2100 5800 2    50   Input ~ 0
+EXT_GPIO1
+Text HLabel 2100 5900 2    50   Input ~ 0
+EXT_GPIO2
+Text HLabel 2100 6000 2    50   Input ~ 0
 EXT_GPIO3
 $EndSCHEMATC
