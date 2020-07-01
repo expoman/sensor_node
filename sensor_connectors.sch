@@ -183,7 +183,7 @@ AR Path="/5E27DC26/5E618D0A" Ref="J10"  Part="1"
 AR Path="/5E5F64C8/5E618D0A" Ref="J?"  Part="1" 
 F 0 "J10" H 1068 5367 50  0000 C CNN
 F 1 "Conn_01x06" H 1068 5276 50  0000 C CNN
-F 2 "Connector_Molex:molex_pico-ezmate_781715006_1x06_P1.20mm_Horizontal" H 1150 4950 50  0001 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Vertical" H 1150 4950 50  0001 C CNN
 F 3 "~" H 1150 4950 50  0001 C CNN
 	1    1150 4950
 	-1   0    0    -1  
