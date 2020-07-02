@@ -52,38 +52,23 @@ F0 "power_supply" 50
 F1 "power_supply.sch" 50
 F2 "I2C_BAT_SDA" I R 2900 1600 50 
 F3 "I2C_BAT_SCL" I R 2900 1700 50 
-F4 "NCHG_BAT" I R 2900 2000 50 
-F5 "VBAT_LOW_ALERT" I R 2900 2700 50 
-F6 "NPGOOD" I R 2900 2500 50 
-F7 "NCHG" I R 2900 2600 50 
-F8 "VCC" I L 1150 1450 50 
-F9 "VCC_1V8" I L 1150 1750 50 
-F10 "VCC_3V3" I L 1150 2150 50 
-F11 "USB" I R 2900 1200 50 
-F12 "EN_3V3" I L 1150 2050 50 
-F13 "NCTRL_LEDS" I R 2900 2400 50 
-F14 "VBAT" I L 1150 2250 50 
+F4 "VCC" I L 1150 1450 50 
+F5 "VCC_1V8" I L 1150 1750 50 
+F6 "VCC_3V3" I L 1150 2150 50 
+F7 "USB" I R 2900 1200 50 
+F8 "EN_3V3" I L 1150 2050 50 
+F9 "VBAT" I L 1150 2250 50 
+F10 "PGOOD" I R 2900 2500 50 
+F11 "CHG" I R 2900 2600 50 
 $EndSheet
 Wire Bus Line
 	2900 1200 3300 1200
 Wire Bus Line
 	7450 1250 7100 1250
 Wire Wire Line
-	7100 1800 7750 1800
+	2950 4750 3350 4750
 Wire Wire Line
-	7100 1900 7750 1900
-Entry Wire Line
-	7750 1800 7850 1900
-Entry Wire Line
-	7750 1900 7850 2000
-Text Label 7300 1800 2    50   ~ 0
-SDA
-Text Label 7300 1900 2    50   ~ 0
-SCL
-Wire Wire Line
-	2950 4750 3200 4750
-Wire Wire Line
-	2950 4850 3200 4850
+	2950 4850 3350 4850
 Wire Wire Line
 	2900 1700 3100 1700
 Wire Wire Line
@@ -92,17 +77,9 @@ Entry Wire Line
 	3100 1600 3200 1700
 Entry Wire Line
 	3100 1700 3200 1800
-Entry Wire Line
-	3200 4750 3300 4850
-Entry Wire Line
-	3200 4850 3300 4950
 Wire Bus Line
 	3200 1800 3550 1800
-Wire Bus Line
-	3300 5100 3700 5100
 Text Label 3550 1800 2    50   ~ 0
-I2C2
-Text Label 3700 5100 2    50   ~ 0
 I2C2
 Wire Wire Line
 	1050 3700 1650 3700
@@ -137,14 +114,6 @@ Wire Wire Line
 Text Label 8500 4150 0    50   ~ 0
 1WIRE0_EXT_DATA
 Wire Wire Line
-	7100 2450 7650 2450
-Wire Wire Line
-	7100 2550 7650 2550
-Text Label 7650 2450 2    50   ~ 0
-ESP_TX
-Text Label 7650 2550 2    50   ~ 0
-ESP_RX
-Wire Wire Line
 	10000 1550 10400 1550
 Wire Wire Line
 	10000 1650 10400 1650
@@ -167,26 +136,18 @@ F4 "ESP_TX" I R 10000 1550 50
 F5 "ESP_RX" I R 10000 1650 50 
 F6 "VCC_1V8" I L 8950 1350 50 
 $EndSheet
-Text Label 3000 4750 0    50   ~ 0
-SDA
-Text Label 3000 4850 0    50   ~ 0
-SCL
+Text Label 3350 4750 2    50   ~ 0
+I2C2_SDA
+Text Label 3350 4850 2    50   ~ 0
+I2C2_SCL
 Wire Wire Line
 	9250 4250 8850 4250
 Wire Wire Line
 	9250 4350 8850 4350
-Entry Wire Line
-	8850 4350 8750 4450
-Entry Wire Line
-	8850 4250 8750 4350
-Wire Bus Line
-	8750 4500 8400 4500
-Text Label 8400 4500 0    50   ~ 0
-I2C1
-Text Label 8900 4250 0    50   ~ 0
-SDA
-Text Label 8900 4350 0    50   ~ 0
-SCL
+Text Label 8850 4250 0    50   ~ 0
+I2C1_SDA
+Text Label 8850 4350 0    50   ~ 0
+I2C1_SCL
 Text Label 3100 1600 2    50   ~ 0
 SDA
 Text Label 3100 1700 2    50   ~ 0
@@ -204,17 +165,13 @@ STM32_PBx
 Text Label 10350 1350 2    50   ~ 0
 PB2
 Wire Bus Line
-	6000 1850 5550 1850
+	6000 1850 5150 1850
 Wire Bus Line
-	6000 1950 5550 1950
-Wire Bus Line
-	6000 2050 5550 2050
-Text Label 5550 1850 0    50   ~ 0
-STM32_PAx
-Text Label 5550 1950 0    50   ~ 0
-STM32_PBx
-Text Label 5550 2050 0    50   ~ 0
-STM32_PCx
+	6000 1950 5150 1950
+Text Label 5150 1850 0    50   ~ 0
+STM_PA[0..15]
+Text Label 5150 1950 0    50   ~ 0
+STM_PB[0..15]
 Wire Wire Line
 	10000 1450 10400 1450
 Entry Wire Line
@@ -224,77 +181,19 @@ Wire Bus Line
 Text Label 10350 1450 2    50   ~ 0
 PB1
 Wire Wire Line
-	2900 2000 3200 2000
-Entry Wire Line
-	3200 2000 3300 2100
-Wire Bus Line
-	3300 2100 3300 2250
-Wire Bus Line
-	3300 2250 3750 2250
-Text Label 3750 2250 2    50   ~ 0
-STM32_PBx
-Text Label 3150 2000 2    50   ~ 0
-PB0
-Wire Wire Line
-	2900 2500 3200 2500
-Wire Wire Line
-	2900 2500 2900 2600
-Wire Wire Line
 	2900 2600 3200 2600
-Wire Wire Line
-	2900 2700 3200 2700
-Text Label 3200 2500 2    50   ~ 0
-PC5
 Text Label 3200 2600 2    50   ~ 0
-PC6
-Text Label 3200 2700 2    50   ~ 0
-PC7
-Entry Wire Line
-	3200 2500 3300 2600
+PC4
 Entry Wire Line
 	3200 2600 3300 2700
-Entry Wire Line
-	3200 2700 3300 2800
-Wire Bus Line
-	3300 2900 3750 2900
-Text Label 3750 2900 2    50   ~ 0
-STM32_PCx
 Wire Wire Line
 	2950 4550 3300 4550
 Entry Wire Line
 	3300 4550 3400 4650
 Wire Bus Line
 	3400 4750 3900 4750
-Text Label 3900 4750 2    50   ~ 0
-STM32_PCx
 Text Label 3100 4550 0    50   ~ 0
 PC13
-Wire Wire Line
-	2900 2400 3200 2400
-Entry Wire Line
-	3200 2400 3300 2500
-Text Label 3200 2400 2    50   ~ 0
-PC4
-Wire Bus Line
-	7850 2100 8300 2100
-Text Label 8300 2100 2    50   ~ 0
-I2C2
-Wire Wire Line
-	7100 1500 7750 1500
-Wire Wire Line
-	7100 1600 7750 1600
-Entry Wire Line
-	7750 1500 7850 1600
-Entry Wire Line
-	7750 1600 7850 1700
-Wire Bus Line
-	7850 1800 8300 1800
-Text Label 8300 1800 2    50   ~ 0
-I2C1
-Text Label 7150 1500 0    50   ~ 0
-SDA
-Text Label 7150 1600 0    50   ~ 0
-SCL
 Wire Wire Line
 	9250 4700 8600 4700
 Wire Wire Line
@@ -304,35 +203,13 @@ Wire Wire Line
 Wire Wire Line
 	9250 5000 8600 5000
 Text Label 8600 4700 0    50   ~ 0
-PD3
+PC3
 Text Label 8600 4800 0    50   ~ 0
-PD4
+PC4
 Text Label 8600 4900 0    50   ~ 0
-PD4
+PC4
 Text Label 8600 5000 0    50   ~ 0
-PD5
-$Sheet
-S 6000 1050 1100 1850
-U 5E2157B8
-F0 "mcu.sch" 50
-F1 "mcu.sch" 50
-F2 "I2C1_SCL" I R 7100 1600 50 
-F3 "I2C1_SDA" I R 7100 1500 50 
-F4 "I2C2_SCL" I R 7100 1900 50 
-F5 "VCC" I L 6000 1300 50 
-F6 "I2C2_SDA" I R 7100 1800 50 
-F7 "USB" I R 7100 1250 50 
-F8 "STM32_PCx" I L 6000 2050 50 
-F9 "STM_PBx" I L 6000 1950 50 
-F10 "STM_PAx" I L 6000 1850 50 
-F11 "VCC_3V3" I L 6000 1200 50 
-F12 "USART2_RX" I R 7100 2450 50 
-F13 "USART2_TX" I R 7100 2550 50 
-F14 "VBAT" I L 6000 1400 50 
-F15 "USART3_RX" I R 7100 2650 50 
-F16 "USART3_TX" I R 7100 2750 50 
-F17 "STM32_PDx" I L 6000 2150 50 
-$EndSheet
+PC5
 Wire Wire Line
 	6000 1200 5550 1200
 Text Label 5550 1200 0    50   ~ 0
@@ -396,25 +273,265 @@ Entry Wire Line
 Wire Bus Line
 	8500 5250 7850 5250
 Text Label 7850 5250 0    50   ~ 0
-STM32_PDx
+STM_PC[0..15]
+$Sheet
+S 6000 1050 1100 1850
+U 5E2157B8
+F0 "mcu.sch" 50
+F1 "mcu.sch" 50
+F2 "VCC" I L 6000 1300 50 
+F3 "USB" I R 7100 1250 50 
+F4 "VCC_3V3" I L 6000 1200 50 
+F5 "VBAT" I L 6000 1400 50 
+F6 "USART3_RX" I R 7100 2650 50 
+F7 "USART3_TX" I R 7100 2750 50 
+F8 "PB[0..9]" I L 6000 1950 50 
+F9 "PA[0..4]" I L 6000 1850 50 
+F10 "PC[0..15]" I L 6000 2050 50 
+$EndSheet
 Wire Bus Line
-	6000 2150 5550 2150
+	5150 2050 6000 2050
+Text Label 5150 2050 0    50   ~ 0
+STM_PC[0..15]
+Wire Wire Line
+	2900 2500 3200 2500
+Text Label 3200 2500 2    50   ~ 0
+PC5
+Entry Wire Line
+	3200 2500 3300 2600
+Text Label 3350 2900 0    50   ~ 0
+STM_PC[0..15]
+Text Label 3400 4750 0    50   ~ 0
+PC[0..15]
+Wire Bus Line
+	3300 2900 3900 2900
+Wire Wire Line
+	6000 3800 6750 3800
+Wire Wire Line
+	6000 3900 6750 3900
+Wire Wire Line
+	6000 3400 6750 3400
+Wire Wire Line
+	6000 3500 6750 3500
+Text Label 6750 3800 2    50   ~ 0
+I2C2_SCL
+Text Label 6750 3900 2    50   ~ 0
+I2C2_SDA
+Wire Wire Line
+	6000 3600 6750 3600
+Wire Wire Line
+	6000 3700 6750 3700
+Text Label 6750 3400 2    50   ~ 0
+USART1_TX
+Text Label 6750 3500 2    50   ~ 0
+USART1_RX
+Text Label 6000 3500 0    50   ~ 0
+STM_PB7
+Text Label 6000 3600 0    50   ~ 0
+STM_PB8
+Text Label 6000 3800 0    50   ~ 0
+STM_PB10
+Text Label 6000 3900 0    50   ~ 0
+STM_PB11
+Text Label 6750 3600 2    50   ~ 0
+I2C1_SCL
+Text Label 6750 3700 2    50   ~ 0
+I2C1_SDA
+Text Label 6000 4150 0    50   ~ 0
+STM_PA2
+Text Label 6000 4050 0    50   ~ 0
+STM_PA3
+Wire Wire Line
+	6750 4050 6000 4050
+Wire Wire Line
+	6750 4150 6000 4150
+Text Label 6750 4050 2    50   ~ 0
+ESP_TX
+Text Label 6750 4150 2    50   ~ 0
+EXP_RX
+Text Label 6000 3700 0    50   ~ 0
+STM_PB9
+Text Label 6000 3400 0    50   ~ 0
+STM_PB6
+Text Label 5700 5550 2    50   ~ 0
+DSIP_BUSY
+Text Label 5700 5450 2    50   ~ 0
+DISP_RST
+Text Label 5700 5350 2    50   ~ 0
+DISP_DC
+Text Label 5700 5250 2    50   ~ 0
+SPI1_MOSI
+Text Label 5700 5150 2    50   ~ 0
+SPI1_MISO
+Text Label 5700 5050 2    50   ~ 0
+SPI1_SCK
+Text Label 5700 4950 2    50   ~ 0
+SPI1_NSS
+Wire Wire Line
+	4950 5550 5700 5550
+Wire Wire Line
+	4950 5450 5700 5450
+Wire Wire Line
+	4950 5350 5700 5350
+Wire Wire Line
+	4950 5250 5700 5250
+Wire Wire Line
+	4950 5150 5700 5150
+Wire Wire Line
+	4950 5050 5700 5050
+Wire Wire Line
+	4950 4950 5700 4950
+Text Label 4950 4950 0    50   ~ 0
+STM_PA4
+Text Label 4950 5050 0    50   ~ 0
+STM_PA5
+Text Label 4950 5150 0    50   ~ 0
+STM_PA6
+Text Label 4950 5250 0    50   ~ 0
+STM_PA7
+Text Label 4950 5350 0    50   ~ 0
+STM_PA8
+Text Label 4950 5450 0    50   ~ 0
+STM_PA9
+Text Label 4950 5550 0    50   ~ 0
+STM_PA10
+$Comp
+L Connector:Conn_01x08_Male J5
+U 1 1 5F1D6E23
+P 6150 5150
+AR Path="/5F1D6E23" Ref="J5"  Part="1" 
+AR Path="/5E2157B8/5F1D6E23" Ref="J?"  Part="1" 
+F 0 "J5" H 6258 5631 50  0000 C CNN
+F 1 "Conn_01x08_Male" H 6258 5540 50  0000 C CNN
+F 2 "Connector_JST:JST_PH_S8B-PH-SM4-TB_1x08-1MP_P2.00mm_Horizontal" H 6150 5150 50  0001 C CNN
+F 3 "~" H 6150 5150 50  0001 C CNN
+	1    6150 5150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6350 4850 6900 4850
+Wire Wire Line
+	6350 4950 6900 4950
+Wire Wire Line
+	6350 5050 6900 5050
+Wire Wire Line
+	6350 5150 6900 5150
+Wire Wire Line
+	6350 5250 6900 5250
+Wire Wire Line
+	6350 5350 6900 5350
+Wire Wire Line
+	6350 5450 6900 5450
+Wire Wire Line
+	6350 5550 6900 5550
+Text Label 6900 4850 2    50   ~ 0
+VCC_3V3
+Text Label 6900 4950 2    50   ~ 0
+GND
+Text Label 6900 5050 2    50   ~ 0
+SPI1_MOSI
+Text Label 6900 5150 2    50   ~ 0
+SPI1_SCK
+Text Label 6900 5250 2    50   ~ 0
+SPI1_NSS
+Text Label 6900 5350 2    50   ~ 0
+DISP_DC
+Text Label 6900 5450 2    50   ~ 0
+DISP_RST
+Text Label 6900 5550 2    50   ~ 0
+DISP_BUSY
+Text Notes 6150 4600 0    50   ~ 0
+Display Connector (SPI)
+$Comp
+L Device:R R?
+U 1 1 5F201DDD
+P 7550 3250
+AR Path="/5E2157B8/5F201DDD" Ref="R?"  Part="1" 
+AR Path="/5F201DDD" Ref="R2"  Part="1" 
+F 0 "R2" V 7343 3250 50  0000 C CNN
+F 1 "4k7" V 7434 3250 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 7480 3250 50  0001 C CNN
+F 3 "~" H 7550 3250 50  0001 C CNN
+	1    7550 3250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5F201DE3
+P 7550 3550
+AR Path="/5E2157B8/5F201DE3" Ref="R?"  Part="1" 
+AR Path="/5F201DE3" Ref="R5"  Part="1" 
+F 0 "R5" V 7343 3550 50  0000 C CNN
+F 1 "4k7" V 7434 3550 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 7480 3550 50  0001 C CNN
+F 3 "~" H 7550 3550 50  0001 C CNN
+	1    7550 3550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7400 3250 7300 3250
+Wire Wire Line
+	7400 3550 7300 3550
+Wire Wire Line
+	7300 3550 7300 3250
+Wire Wire Line
+	7700 3250 8100 3250
+Wire Wire Line
+	7700 3550 8100 3550
+Text Label 7300 3450 2    50   ~ 0
+VCC_3V3
+Text Label 8100 3250 2    50   ~ 0
+I2C1_SCL
+Text Label 8100 3550 2    50   ~ 0
+I2C1_SDA
+$Comp
+L Device:R R?
+U 1 1 5F201DF1
+P 7550 3900
+AR Path="/5E2157B8/5F201DF1" Ref="R?"  Part="1" 
+AR Path="/5F201DF1" Ref="R6"  Part="1" 
+F 0 "R6" V 7343 3900 50  0000 C CNN
+F 1 "4k7" V 7434 3900 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 7480 3900 50  0001 C CNN
+F 3 "~" H 7550 3900 50  0001 C CNN
+	1    7550 3900
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5F201DF7
+P 7550 4200
+AR Path="/5E2157B8/5F201DF7" Ref="R?"  Part="1" 
+AR Path="/5F201DF7" Ref="R7"  Part="1" 
+F 0 "R7" V 7343 4200 50  0000 C CNN
+F 1 "4k7" V 7434 4200 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 7480 4200 50  0001 C CNN
+F 3 "~" H 7550 4200 50  0001 C CNN
+	1    7550 4200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7400 3900 7300 3900
+Wire Wire Line
+	7400 4200 7300 4200
+Wire Wire Line
+	7300 4200 7300 3900
+Wire Wire Line
+	7700 3900 8100 3900
+Wire Wire Line
+	7700 4200 8100 4200
+Text Label 7300 4100 2    50   ~ 0
+VCC_3V3
+Text Label 8100 3900 2    50   ~ 0
+I2C2_SCL
+Text Label 8100 4200 2    50   ~ 0
+I2C2_SDA
 Wire Bus Line
 	3400 4500 3400 4750
 Wire Bus Line
-	8750 4350 8750 4500
-Wire Bus Line
-	3300 4850 3300 5100
-Wire Bus Line
-	7850 1900 7850 2100
-Wire Bus Line
-	7850 1600 7850 1800
-Wire Bus Line
 	3750 3850 3750 4500
 Wire Bus Line
-	3300 2500 3300 2900
+	3300 2600 3300 2900
 Wire Bus Line
 	8500 4800 8500 5250
-Text Label 5550 2150 0    50   ~ 0
-STM32_PDx
 $EndSCHEMATC
