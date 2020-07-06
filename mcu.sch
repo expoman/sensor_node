@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 6 6
+Sheet 5 6
 Title ""
 Date ""
 Rev ""
@@ -353,16 +353,10 @@ Text Label 6300 4950 2    50   ~ 0
 PB[0..9]
 Text HLabel 6300 4950 2    50   Input ~ 0
 PB[0..9]
-Text Label 5850 650  0    50   ~ 0
+Text Label 6000 650  0    50   ~ 0
 VUSB
 Wire Wire Line
 	5850 650  6200 650 
-Entry Wire Line
-	6200 650  6300 750 
-Wire Bus Line
-	6300 750  6600 750 
-Text Label 6600 750  2    50   ~ 0
-USB
 Wire Wire Line
 	8650 1750 9250 1750
 Text HLabel 9250 1750 2    50   Input ~ 0
@@ -398,7 +392,7 @@ PA1
 Text Label 5700 1550 2    50   ~ 0
 PA0
 Text Label 6300 3200 2    50   ~ 0
-PA[0..4]
+PA[0..15]
 Wire Bus Line
 	5800 3200 6400 3200
 Wire Wire Line
@@ -439,25 +433,6 @@ Wire Wire Line
 	5550 650  5350 650 
 Connection ~ 5350 650 
 $Comp
-L Device:C C30
-U 1 1 5E79E538
-P 1100 2750
-F 0 "C30" H 1215 2796 50  0000 L CNN
-F 1 "10uF" H 1215 2705 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 1138 2600 50  0001 C CNN
-F 3 "~" H 1100 2750 50  0001 C CNN
-	1    1100 2750
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1100 2900 1100 3250
-Wire Wire Line
-	1100 3250 750  3250
-Wire Wire Line
-	1100 2600 1100 2350
-Wire Wire Line
-	1100 2350 750  2350
-$Comp
 L Device:C C34
 U 1 1 5E7DCB65
 P 2100 1150
@@ -472,25 +447,6 @@ Wire Wire Line
 	2100 1300 2100 1650
 Wire Wire Line
 	2100 1000 2100 750 
-$Comp
-L Device:C C31
-U 1 1 5E7FD9E7
-P 1450 2750
-F 0 "C31" H 1565 2796 50  0000 L CNN
-F 1 "10uF" H 1565 2705 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 1488 2600 50  0001 C CNN
-F 3 "~" H 1450 2750 50  0001 C CNN
-	1    1450 2750
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1450 2900 1450 3250
-Wire Wire Line
-	1450 3250 1100 3250
-Wire Wire Line
-	1450 2600 1450 2350
-Wire Wire Line
-	1450 2350 1100 2350
 $Comp
 L Device:C C35
 U 1 1 5E81506E
@@ -509,8 +465,6 @@ Wire Wire Line
 Text Label 1250 2350 0    50   ~ 0
 VCC
 Connection ~ 1550 3250
-Wire Wire Line
-	1550 3250 1450 3250
 $Comp
 L power:GND #PWR0118
 U 1 1 5E83A52B
@@ -744,10 +698,6 @@ Wire Wire Line
 	7000 1600 7750 1600
 Wire Wire Line
 	7000 1700 7750 1700
-Text Label 7750 1700 2    50   ~ 0
-USB_DP
-Text Label 7750 1600 2    50   ~ 0
-USB_DN
 Text Label 7000 1600 0    50   ~ 0
 PA11
 Text Label 7000 1700 0    50   ~ 0
@@ -825,7 +775,7 @@ Entry Wire Line
 Wire Bus Line
 	7850 1900 8300 1900
 Text Label 8300 1900 2    50   ~ 0
-USB
+USB[0..1]
 Wire Wire Line
 	4950 3850 5500 3850
 Wire Wire Line
@@ -1000,6 +950,12 @@ F 3 "" H 10050 2050 50  0001 C CNN
 	1    10050 2050
 	1    0    0    -1  
 $EndComp
+Text HLabel 6200 650  2    50   Input ~ 0
+VUSB
+Wire Wire Line
+	750  2350 1450 2350
+Wire Wire Line
+	750  3250 1550 3250
 Wire Bus Line
 	7850 1700 7850 1900
 Wire Bus Line
@@ -1008,4 +964,10 @@ Wire Bus Line
 	5600 3350 5600 4950
 Wire Bus Line
 	3200 3350 3200 5050
+Text Label 7750 1700 2    50   ~ 0
+USB1
+Text Label 7750 1600 2    50   ~ 0
+USB0
+Text HLabel 8300 1900 2    50   Output ~ 0
+USB[0..1]
 $EndSCHEMATC

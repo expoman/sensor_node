@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 6
+Sheet 6 6
 Title ""
 Date ""
 Rev ""
@@ -538,10 +538,6 @@ Text Label 3800 3700 2    50   ~ 0
 VCC
 Text HLabel 3800 3700 2    50   Input ~ 0
 VCC
-Text Label 3750 1550 2    50   ~ 0
-USB_DP
-Text Label 3750 1750 2    50   ~ 0
-USB_DN
 Entry Wire Line
 	3750 1550 3850 1650
 Entry Wire Line
@@ -549,7 +545,7 @@ Entry Wire Line
 Wire Bus Line
 	3850 2050 4200 2050
 Text HLabel 4200 2050 2    50   Input ~ 0
-USB
+USB[0..1]
 $Comp
 L Regulator_Switching:TPS826711 U8
 U 1 1 5E3CE725
@@ -858,14 +854,6 @@ Text Label 7250 3450 0    50   ~ 0
 VCC
 Text HLabel 8000 3550 0    50   Input ~ 0
 EN_3V3
-Entry Wire Line
-	1400 3000 1300 3100
-Wire Bus Line
-	1300 3100 850  3100
-Text Label 850  3100 0    50   ~ 0
-USB
-Text Label 4150 2050 2    50   ~ 0
-USB
 Wire Wire Line
 	2700 6300 3100 6300
 Text Label 5750 1400 0    50   ~ 0
@@ -943,4 +931,10 @@ Wire Wire Line
 NoConn ~ 750  2000
 Wire Bus Line
 	3850 1650 3850 2050
+Text HLabel 1400 3000 0    50   Output ~ 0
+VUSB
+Text Label 3750 1750 2    50   ~ 0
+USB0
+Text Label 3750 1550 2    50   ~ 0
+USB1
 $EndSCHEMATC

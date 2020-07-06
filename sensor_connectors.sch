@@ -27,11 +27,9 @@ F 3 "~" H 1150 1350 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	1350 1450 1900 1450
+	1350 1450 1750 1450
 Wire Wire Line
-	1350 1350 2200 1350
-Wire Wire Line
-	1350 1250 1900 1250
+	1350 1250 1550 1250
 Wire Wire Line
 	1900 1250 1900 1150
 $Comp
@@ -86,7 +84,7 @@ AR Path="/5E27DC26/5E44E1EB" Ref="J6"  Part="1"
 AR Path="/5E5F64C8/5E44E1EB" Ref="J?"  Part="1" 
 F 0 "J6" H 1258 2631 50  0000 C CNN
 F 1 "Conn_01x04_Male" H 1258 2540 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 1150 2350 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Horizontal" H 1150 2350 50  0001 C CNN
 F 3 "~" H 1150 2350 50  0001 C CNN
 	1    1150 2350
 	1    0    0    -1  
@@ -214,4 +212,40 @@ Text HLabel 2100 5050 2    50   Input ~ 0
 EXT_GPIO2
 Text HLabel 2100 5150 2    50   Input ~ 0
 EXT_GPIO3
+$Comp
+L Connector_Generic:Conn_01x03 J9
+U 1 1 5F047541
+P 1150 1800
+AR Path="/5E27DC26/5F047541" Ref="J9"  Part="1" 
+AR Path="/5E5F64C8/5F047541" Ref="J?"  Part="1" 
+F 0 "J9" H 1068 1475 50  0000 C CNN
+F 1 "Conn_01x03" H 1068 1566 50  0000 C CNN
+F 2 "Connector_JST:JST_EH_S3B-EH_1x03_P2.50mm_Horizontal" H 1150 1800 50  0001 C CNN
+F 3 "~" H 1150 1800 50  0001 C CNN
+	1    1150 1800
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1550 1250 1550 1700
+Wire Wire Line
+	1550 1700 1350 1700
+Connection ~ 1550 1250
+Wire Wire Line
+	1550 1250 1900 1250
+Wire Wire Line
+	1650 1350 1650 1800
+Wire Wire Line
+	1650 1800 1350 1800
+Wire Wire Line
+	1350 1350 1650 1350
+Connection ~ 1650 1350
+Wire Wire Line
+	1650 1350 2200 1350
+Wire Wire Line
+	1350 1900 1750 1900
+Wire Wire Line
+	1750 1900 1750 1450
+Connection ~ 1750 1450
+Wire Wire Line
+	1750 1450 1900 1450
 $EndSCHEMATC
