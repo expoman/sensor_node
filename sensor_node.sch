@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 6
+Sheet 1 7
 Title ""
 Date ""
 Rev ""
@@ -499,14 +499,6 @@ Text Label 5550 1500 0    50   ~ 0
 VUSB
 Wire Wire Line
 	2900 1300 3300 1300
-Wire Bus Line
-	3400 4500 3400 4750
-Wire Bus Line
-	3750 3850 3750 4500
-Wire Bus Line
-	3300 2600 3300 2900
-Wire Bus Line
-	8500 4800 8500 5250
 Text Label 3300 1300 2    50   ~ 0
 VUSB
 $Sheet
@@ -524,4 +516,12 @@ F8 "CHG" I R 2900 2600 50
 F9 "VUSB" O R 2900 1300 50 
 F10 "USB[0..1]" I R 2900 1200 50 
 $EndSheet
+Wire Bus Line
+	3400 4500 3400 4750
+Wire Bus Line
+	3750 3850 3750 4500
+Wire Bus Line
+	3300 2600 3300 2900
+Wire Bus Line
+	8500 4800 8500 5250
 $EndSCHEMATC

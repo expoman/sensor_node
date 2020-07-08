@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 5 6
+Sheet 6 7
 Title ""
 Date ""
 Rev ""
@@ -956,6 +956,12 @@ Wire Wire Line
 	750  2350 1450 2350
 Wire Wire Line
 	750  3250 1550 3250
+Text Label 7750 1700 2    50   ~ 0
+USB1
+Text Label 7750 1600 2    50   ~ 0
+USB0
+Text HLabel 8300 1900 2    50   Output ~ 0
+USB[0..1]
 Wire Bus Line
 	7850 1700 7850 1900
 Wire Bus Line
@@ -964,10 +970,4 @@ Wire Bus Line
 	5600 3350 5600 4950
 Wire Bus Line
 	3200 3350 3200 5050
-Text Label 7750 1700 2    50   ~ 0
-USB1
-Text Label 7750 1600 2    50   ~ 0
-USB0
-Text HLabel 8300 1900 2    50   Output ~ 0
-USB[0..1]
 $EndSCHEMATC

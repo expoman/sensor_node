@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 6 6
+Sheet 7 7
 Title ""
 Date ""
 Rev ""
@@ -929,12 +929,12 @@ Wire Wire Line
 Wire Wire Line
 	850  2000 850  2300
 NoConn ~ 750  2000
-Wire Bus Line
-	3850 1650 3850 2050
 Text HLabel 1400 3000 0    50   Output ~ 0
 VUSB
 Text Label 3750 1750 2    50   ~ 0
 USB0
 Text Label 3750 1550 2    50   ~ 0
 USB1
+Wire Bus Line
+	3850 1650 3850 2050
 $EndSCHEMATC

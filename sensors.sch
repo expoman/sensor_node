@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 6
+Sheet 3 7
 Title ""
 Date ""
 Rev ""
@@ -544,4 +544,10 @@ F 3 "" H 5500 6950 50  0001 C CNN
 	1    5500 6950
 	1    0    0    -1  
 $EndComp
+$Sheet
+S 5550 3300 850  750 
+U 5F063C28
+F0 "gps" 50
+F1 "gps.sch" 50
+$EndSheet
 $EndSCHEMATC
