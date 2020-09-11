@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 6 7
+Sheet 4 7
 Title ""
 Date ""
 Rev ""
@@ -869,7 +869,7 @@ Wire Wire Line
 Wire Wire Line
 	9450 2400 9450 2050
 Text Label 9450 2050 3    50   ~ 0
-PA0
+PA1
 $Comp
 L power:GND #PWR0117
 U 1 1 5F2230EB
@@ -962,6 +962,8 @@ Text Label 7750 1600 2    50   ~ 0
 USB0
 Text HLabel 8300 1900 2    50   Output ~ 0
 USB[0..1]
+Text Notes 6950 1900 0    50   ~ 0
+PA11 <-> USB_DM\nPA12 <-> USB_DP
 Wire Bus Line
 	7850 1700 7850 1900
 Wire Bus Line

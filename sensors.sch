@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 7
+Sheet 6 7
 Title ""
 Date ""
 Rev ""
@@ -342,61 +342,32 @@ Text Notes 8800 1900 0    50   ~ 0
 Supply Voltage 1.6-3.6V
 Text Notes 2050 2850 0    50   ~ 0
 Supply voltage 1.7 - 3.6V
-Text Label 1200 7000 1    50   ~ 0
-VBAT
-Text HLabel 1200 7000 3    50   Input ~ 0
-VBAT
-Text HLabel 2450 6350 0    50   Input ~ 0
+Text HLabel 5100 4900 2    50   Input ~ 0
 GPS_TX
-Text HLabel 2450 6450 0    50   Input ~ 0
+Text HLabel 5100 5000 2    50   Input ~ 0
 GPS_RX
-$Comp
-L Jumper:SolderJumper_3_Bridged12 JP5
-U 1 1 5E6D64EE
-P 1200 6250
-F 0 "JP5" H 1200 6455 50  0000 C CNN
-F 1 "SolderJumper_3_Bridged12" H 1200 6364 50  0000 C CNN
-F 2 "Jumper:SolderJumper-3_P1.3mm_Bridged12_RoundedPad1.0x1.5mm" H 1200 6250 50  0001 C CNN
-F 3 "~" H 1200 6250 50  0001 C CNN
-	1    1200 6250
-	0    -1   1    0   
-$EndComp
-Wire Wire Line
-	1200 7000 1200 6450
-Wire Wire Line
-	1200 6050 1200 5600
-Text Label 1200 5600 3    50   ~ 0
-VGPS
 $Comp
 L Device:Q_PMOS_GSD Q6
 U 1 1 5E72F7E6
-P 2250 5650
-F 0 "Q6" H 2455 5696 50  0000 L CNN
-F 1 "Q_PMOS_GSD" H 2455 5605 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23_Handsoldering" H 2450 5750 50  0001 C CNN
-F 3 "~" H 2250 5650 50  0001 C CNN
-	1    2250 5650
+P 2800 4400
+F 0 "Q6" H 3005 4446 50  0000 L CNN
+F 1 "Q_PMOS_GSD" H 3005 4355 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23_Handsoldering" H 3000 4500 50  0001 C CNN
+F 3 "~" H 2800 4400 50  0001 C CNN
+	1    2800 4400
 	1    0    0    1   
 $EndComp
 Wire Wire Line
-	2350 5450 2350 5150
+	2900 4200 2900 3900
 Wire Wire Line
-	2350 5150 1800 5150
-Text Label 1800 5150 0    50   ~ 0
+	2900 3900 2550 3900
+Text Label 2350 3900 0    50   ~ 0
 VCC_3V3
-Text Label 1750 5650 0    50   ~ 0
+Text Label 1300 4750 0    50   ~ 0
 GPS_EN
-Wire Wire Line
-	2350 5850 2350 6100
-Wire Wire Line
-	2350 6100 1900 6100
-Text Label 1900 6100 0    50   ~ 0
-VGPS
-Wire Wire Line
-	1750 5650 2050 5650
-Text HLabel 2450 6750 0    50   Input ~ 0
+Text HLabel 2950 5200 0    50   Input ~ 0
 GPS_RESET
-Text HLabel 1750 5650 0    50   Input ~ 0
+Text HLabel 1250 4750 0    50   Input ~ 0
 GPS_EN
 Wire Wire Line
 	7000 1650 8750 1650
@@ -431,123 +402,106 @@ Text HLabel 4600 1300 0    50   Input ~ 0
 SENSORS_EN
 Text HLabel 4750 800  0    50   Input ~ 0
 VCC_3V3
-$Comp
-L Connector_Generic:Conn_02x08_Counter_Clockwise J11
-U 1 1 5F00B1AB
-P 3200 6450
-F 0 "J11" H 3250 6967 50  0000 C CNN
-F 1 "Conn_02x08_Counter_Clockwise" H 3250 6876 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x08_P2.54mm_Vertical_SMD" H 3200 6450 50  0001 C CNN
-F 3 "~" H 3200 6450 50  0001 C CNN
-	1    3200 6450
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
-	3000 6350 2450 6350
+	4550 4900 5100 4900
 Wire Wire Line
-	3000 6450 2450 6450
+	4550 5000 5100 5000
 Wire Wire Line
-	3000 6550 2450 6550
+	4550 5100 5100 5100
 Wire Wire Line
-	3000 6650 2450 6650
+	4550 5200 5100 5200
 Wire Wire Line
-	3000 6750 2450 6750
-Wire Wire Line
-	3000 6850 2450 6850
-Wire Wire Line
-	4050 6150 3500 6150
-Wire Wire Line
-	4050 6250 3500 6250
-Wire Wire Line
-	4050 6350 3500 6350
-Wire Wire Line
-	4050 6450 3500 6450
-Wire Wire Line
-	4050 6650 3500 6650
-Wire Wire Line
-	4050 6750 3500 6750
-Wire Wire Line
-	4050 6850 3500 6850
-Text Label 2450 6250 0    50   ~ 0
-VBCKP
-Text Label 4050 6150 2    50   ~ 0
-GND
-Text Label 2450 6350 0    50   ~ 0
+	3500 5200 2950 5200
+Text Label 5100 4900 2    50   ~ 0
 GPS_TX
-Text Label 2450 6450 0    50   ~ 0
+Text Label 5100 5000 2    50   ~ 0
 GPS_RX
-Text Label 2450 6550 0    50   ~ 0
+Text Label 5100 5100 2    50   ~ 0
 GPS_SDA
-Text Label 2450 6650 0    50   ~ 0
+Text Label 5100 5200 2    50   ~ 0
 GPS_SCL
-Text Label 2450 6750 0    50   ~ 0
+Text Label 2950 5200 0    50   ~ 0
 GPS_Reset
-Text Label 2450 6850 0    50   ~ 0
-D_SEL
-Text Label 4050 6250 2    50   ~ 0
-GND
-Text Label 4050 6750 2    50   ~ 0
-EXTINT
-Text Label 4050 6850 2    50   ~ 0
-SAFEBOOT
-Text Label 4050 6350 2    50   ~ 0
-GND
-Text Label 4050 6450 2    50   ~ 0
-GND
-Text Label 4050 6650 2    50   ~ 0
-GND
-Wire Wire Line
-	2350 6100 2350 6150
-Wire Wire Line
-	2350 6150 3000 6150
-Connection ~ 2350 6100
-Wire Wire Line
-	1350 6250 3000 6250
-Text HLabel 2450 6550 0    50   Input ~ 0
+Text HLabel 5100 5100 2    50   Input ~ 0
 GPS_SDA
-Text HLabel 2450 6650 0    50   Input ~ 0
+Text HLabel 5100 5200 2    50   Input ~ 0
 GPS_SCL
-Text HLabel 2450 6850 0    50   Input ~ 0
-GPS_DSEL
-Text Label 4050 6550 2    50   ~ 0
+Text HLabel 4750 5300 2    50   Input ~ 0
 GPS_TIMEPULSE
-Text HLabel 4750 6350 1    50   Input ~ 0
-GPS_TIMEPULSE
-$Comp
-L Connector:Conn_Coaxial J7
-U 1 1 5F26E0F0
-P 5500 6550
-F 0 "J7" H 5600 6525 50  0000 L CNN
-F 1 "Conn_Coaxial" H 5600 6434 50  0000 L CNN
-F 2 "Connector_Coaxial:U.FL_Hirose_U.FL-R-SMT-1_Vertical" H 5500 6550 50  0001 C CNN
-F 3 " ~" H 5500 6550 50  0001 C CNN
-	1    5500 6550
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
-	3500 6550 4750 6550
-Wire Wire Line
-	4750 6550 4750 6350
-Connection ~ 4750 6550
-Wire Wire Line
-	4750 6550 5300 6550
-Wire Wire Line
-	5500 6750 5500 6950
-$Comp
-L power:GND #PWR0130
-U 1 1 5F275B46
-P 5500 6950
-F 0 "#PWR0130" H 5500 6700 50  0001 C CNN
-F 1 "GND" H 5505 6777 50  0000 C CNN
-F 2 "" H 5500 6950 50  0001 C CNN
-F 3 "" H 5500 6950 50  0001 C CNN
-	1    5500 6950
-	1    0    0    -1  
-$EndComp
+	4550 5300 4750 5300
 $Sheet
-S 5550 3300 850  750 
+S 3500 4800 1050 750 
 U 5F063C28
 F0 "gps" 50
 F1 "gps.sch" 50
+F2 "GPS_TX" I R 4550 4900 50 
+F3 "GPS_RX" I R 4550 5000 50 
+F4 "GPS_SDA" I R 4550 5100 50 
+F5 "GPS_SCL" I R 4550 5200 50 
+F6 "TIMEPULSE" I R 4550 5300 50 
+F7 "GPS_RESET" I L 3500 5200 50 
+F8 "GPS_VBCK" I L 3500 5000 50 
+F9 "GPS_VCC" I L 3500 4900 50 
 $EndSheet
+Wire Wire Line
+	2900 4900 3500 4900
+Wire Wire Line
+	2900 4600 2900 4900
+$Comp
+L Device:R_Small R12
+U 1 1 5F08A49C
+P 2550 4150
+F 0 "R12" H 2609 4196 50  0000 L CNN
+F 1 "R_Small" H 2609 4105 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 2550 4150 50  0001 C CNN
+F 3 "~" H 2550 4150 50  0001 C CNN
+	1    2550 4150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 4050 2550 3900
+Connection ~ 2550 3900
+Wire Wire Line
+	2550 3900 2350 3900
+Wire Wire Line
+	2550 4250 2550 4400
+Connection ~ 2550 4400
+Wire Wire Line
+	2550 4400 2600 4400
+$Comp
+L Device:Q_NMOS_DGS Q2
+U 1 1 5F1EF15B
+P 1850 4750
+F 0 "Q2" H 2054 4796 50  0000 L CNN
+F 1 "Q_NMOS_DGS" H 2054 4705 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23_Handsoldering" H 2050 4850 50  0001 C CNN
+F 3 "~" H 1850 4750 50  0001 C CNN
+	1    1850 4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1650 4750 1250 4750
+Wire Wire Line
+	1950 4550 1950 4400
+Wire Wire Line
+	1950 4400 2550 4400
+Wire Wire Line
+	1950 4950 1950 5100
+$Comp
+L power:GND #PWR0137
+U 1 1 5F1FA2F1
+P 1950 5100
+F 0 "#PWR0137" H 1950 4850 50  0001 C CNN
+F 1 "GND" H 1955 4927 50  0000 C CNN
+F 2 "" H 1950 5100 50  0001 C CNN
+F 3 "" H 1950 5100 50  0001 C CNN
+	1    1950 5100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2900 4900 2900 5000
+Connection ~ 2900 4900
+Wire Wire Line
+	2900 5000 3500 5000
 $EndSCHEMATC

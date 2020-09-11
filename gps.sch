@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 7
+Sheet 7 7
 Title ""
 Date ""
 Rev ""
@@ -29,8 +29,6 @@ F 3 "https://www.u-blox.com/sites/default/files/NEO-M8-FW3_DataSheet_%28UBX-1503
 $EndComp
 Wire Wire Line
 	5100 2800 5100 2350
-Text Label 4450 2350 0    50   ~ 0
-VGPS
 Wire Wire Line
 	4600 3700 3850 3700
 Wire Wire Line
@@ -47,61 +45,6 @@ Text Label 3850 3400 0    50   ~ 0
 GPS_TX
 Text Label 3850 3500 0    50   ~ 0
 GPS_RX
-$Comp
-L Connector:USB_B_Micro J?
-U 1 1 5F0F1F51
-P 3300 2450
-AR Path="/5E27F445/5F0F1F51" Ref="J?"  Part="1" 
-AR Path="/5E27F445/5F0E38AA/5F0F1F51" Ref="J?"  Part="1" 
-AR Path="/5E27F445/5F063C28/5F0F1F51" Ref="J12"  Part="1" 
-F 0 "J12" H 3357 2917 50  0000 C CNN
-F 1 "USB_B_Micro" H 3357 2826 50  0000 C CNN
-F 2 "" H 3450 2400 50  0001 C CNN
-F 3 "~" H 3450 2400 50  0001 C CNN
-	1    3300 2450
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3200 2850 3200 3100
-Wire Wire Line
-	3200 3100 3250 3100
-Wire Wire Line
-	3300 3100 3300 2850
-Wire Wire Line
-	3250 3100 3250 3150
-Connection ~ 3250 3100
-Wire Wire Line
-	3250 3100 3300 3100
-$Comp
-L power:GND #PWR?
-U 1 1 5F0F1F5D
-P 3250 3150
-AR Path="/5E27F445/5F0F1F5D" Ref="#PWR?"  Part="1" 
-AR Path="/5E27F445/5F0E38AA/5F0F1F5D" Ref="#PWR?"  Part="1" 
-AR Path="/5E27F445/5F063C28/5F0F1F5D" Ref="#PWR0131"  Part="1" 
-F 0 "#PWR0131" H 3250 2900 50  0001 C CNN
-F 1 "GND" H 3255 2977 50  0000 C CNN
-F 2 "" H 3250 3150 50  0001 C CNN
-F 3 "" H 3250 3150 50  0001 C CNN
-	1    3250 3150
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3600 2250 5300 2250
-Wire Wire Line
-	5300 2250 5300 2800
-Wire Wire Line
-	3600 2450 4350 2450
-Wire Wire Line
-	4350 2450 4350 3200
-Wire Wire Line
-	4350 3200 4600 3200
-Wire Wire Line
-	4600 3100 4250 3100
-Wire Wire Line
-	4250 3100 4250 2550
-Wire Wire Line
-	4250 2550 3600 2550
 Wire Wire Line
 	5500 2800 5500 2650
 Wire Wire Line
@@ -125,7 +68,7 @@ $EndComp
 Wire Wire Line
 	6300 4000 6000 4000
 Wire Wire Line
-	6300 4000 6700 4000
+	6300 4000 6600 4000
 Connection ~ 6300 4000
 $Comp
 L Connector:Conn_Coaxial J?
@@ -190,8 +133,6 @@ F 3 "~" H 4550 4200 50  0001 C CNN
 	1    4350 4200
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	5200 2800 5200 2150
 $Comp
 L Device:C C?
 U 1 1 5F0F1F94
@@ -254,7 +195,7 @@ F 3 "" H 6650 3400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Label 6550 2900 0    50   ~ 0
-VCC_3V3
+VCC
 Text Label 5200 2700 1    50   ~ 0
 VBCKP
 $Comp
@@ -318,8 +259,6 @@ F 3 "" H 7300 3400 50  0001 C CNN
 $EndComp
 Text Label 7200 2900 0    50   ~ 0
 VBCKP
-Text Label 4100 2250 0    50   ~ 0
-VUSB
 $Comp
 L Device:L L?
 U 1 1 5F0F1FCF
@@ -340,25 +279,17 @@ NoConn ~ 4600 4000
 $Comp
 L Device:R R?
 U 1 1 5F0F1FD7
-P 3500 4100
+P 3050 4300
 AR Path="/5E27F445/5F0F1FD7" Ref="R?"  Part="1" 
 AR Path="/5E27F445/5F0E38AA/5F0F1FD7" Ref="R?"  Part="1" 
 AR Path="/5E27F445/5F063C28/5F0F1FD7" Ref="R11"  Part="1" 
-F 0 "R11" H 3570 4146 50  0000 L CNN
-F 1 "R" H 3570 4055 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 3430 4100 50  0001 C CNN
-F 3 "~" H 3500 4100 50  0001 C CNN
-	1    3500 4100
-	1    0    0    -1  
+F 0 "R11" H 3120 4346 50  0000 L CNN
+F 1 "R" H 3120 4255 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 2980 4300 50  0001 C CNN
+F 3 "~" H 3050 4300 50  0001 C CNN
+	1    3050 4300
+	0    1    1    0   
 $EndComp
-Wire Wire Line
-	3500 3950 3500 3750
-Wire Wire Line
-	3500 3750 3150 3750
-Text Label 3150 3750 0    50   ~ 0
-VCC_3V3
-Wire Wire Line
-	3500 4300 3800 4300
 Wire Wire Line
 	3800 4300 4600 4300
 Wire Wire Line
@@ -381,8 +312,6 @@ $EndComp
 Connection ~ 5700 2650
 Wire Wire Line
 	5700 2650 6300 2650
-Wire Wire Line
-	3500 4250 3500 4300
 Wire Wire Line
 	7300 3700 7750 3700
 Wire Wire Line
@@ -567,4 +496,84 @@ F 3 "" H 3800 5050 50  0001 C CNN
 	1    3800 5050
 	1    0    0    -1  
 $EndComp
+Text HLabel 2200 4300 0    50   Input ~ 0
+GPS_VCC
+Wire Wire Line
+	2200 4300 2900 4300
+Wire Wire Line
+	3200 4300 3800 4300
+Text HLabel 3850 3400 0    50   Input ~ 0
+GPS_TX
+Text HLabel 3850 3500 0    50   Input ~ 0
+GPS_RX
+Text HLabel 3850 3700 0    50   Input ~ 0
+GPS_SDA
+Text HLabel 3850 3800 0    50   Input ~ 0
+GPS_SCL
+Text HLabel 6900 4750 2    50   Input ~ 0
+TIMEPULSE
+Wire Wire Line
+	6900 4750 6600 4750
+Wire Wire Line
+	6600 4750 6600 4000
+Connection ~ 6600 4000
+Wire Wire Line
+	6600 4000 6700 4000
+Text Label 4450 2350 0    50   ~ 0
+VCC
+Wire Wire Line
+	5300 2350 5300 2800
+Text Label 5200 2150 0    50   ~ 0
+GPS_VBCK
+Wire Wire Line
+	3500 4750 2950 4750
+Text HLabel 2950 4750 0    50   Input ~ 0
+GPS_RESET
+Wire Wire Line
+	5200 1650 4650 1650
+Wire Wire Line
+	5200 1650 5200 2800
+Text HLabel 4650 1650 0    50   Input ~ 0
+GPS_VBCK
+Wire Wire Line
+	4600 4400 4400 4400
+Wire Wire Line
+	4400 4400 4400 5150
+$Comp
+L Jumper:Jumper_2_Open JP4
+U 1 1 5F0A08DA
+P 4400 5350
+F 0 "JP4" V 4354 5448 50  0000 L CNN
+F 1 "Jumper_2_Open" V 4445 5448 50  0000 L CNN
+F 2 "" H 4400 5350 50  0001 C CNN
+F 3 "~" H 4400 5350 50  0001 C CNN
+	1    4400 5350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4400 5550 4400 5800
+$Comp
+L power:GND #PWR?
+U 1 1 5F0A3037
+P 4400 5800
+AR Path="/5E27F445/5F0A3037" Ref="#PWR?"  Part="1" 
+AR Path="/5E27F445/5F0E38AA/5F0A3037" Ref="#PWR?"  Part="1" 
+AR Path="/5E27F445/5F063C28/5F0A3037" Ref="#PWR0130"  Part="1" 
+F 0 "#PWR0130" H 4400 5550 50  0001 C CNN
+F 1 "GND" H 4405 5627 50  0000 C CNN
+F 2 "" H 4400 5800 50  0001 C CNN
+F 3 "" H 4400 5800 50  0001 C CNN
+	1    4400 5800
+	1    0    0    -1  
+$EndComp
+Text Notes 4550 5500 0    50   ~ 0
+Close for SPI interface
+Text Label 2500 4300 0    50   ~ 0
+VCC
+Wire Wire Line
+	5300 2350 5850 2350
+Text Label 5850 2350 2    50   ~ 0
+VUSB
+NoConn ~ 4600 3100
+NoConn ~ 4600 3200
 $EndSCHEMATC
